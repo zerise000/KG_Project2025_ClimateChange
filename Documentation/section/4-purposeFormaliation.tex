@@ -1,0 +1,116 @@
+\section{Purpose Definition}
+
+From the Project design it is possible to derive a formal description of the situation by first
+illustrating the possible scenarios:
+
+\begin{itemize}
+  \item \textbf{Mario Rossi}  is performing a research on the effects of climate change, which could be useful for some supervisor
+                              agencies specialized on the theme (e.g ESA). He needs to retrieve some data about the weather of the territory,
+                              analyzing how the temperature has evolved over the years and how much it has drifted from the natural trend. 
+  \item \textbf{Laura Rosa}  is planning a long journey on the mountains with her friends, and she needs to know the metheorogical data of the locations
+                             they are going to visit, especially the rainfall events and the sunny days of the previous years in order to make
+                             decision on the logistics
+  \item \textbf{Luigi Verdi} is worried about how the climate events of the last years could affect his farming activities
+                             and damage his products.Agriculture is one of the sectors
+                             which has been mostly affected negatively by the climate change, so he wants to be prepared
+\end{itemize}
+
+\subsection{Personas}
+
+Now that the scenarios have been defined it is time to see the profiles of the users mentioned above:
+
+\begin{itemize}
+  \item \textbf{Mario Rossi} is a 26 years old researcher at the Trento university, specialized in ecology and enviromental research
+  \item \textbf{Laura Rosa} is a 30 years old woman who is also planning a trip on the mountains of the Trentino region, however
+                            in her case the main activity is a trekking exursion with her friends
+  \item \textbf{Luigi Verdi} is a 56 years old farmer, with a small field nearby Trento. His main products are
+                             potatoes and grape, the latter one especially is cultivated in summer
+                             and gathered during grape harvest period
+\end{itemize}
+
+\subsection{Competency Question}
+
+Each Persona has to deal with different scenarios, which could be incapsuleted in the definition
+of Competency Questions(CQ). Some of them could be formalized in the following table
+
+\begin{center}
+ \begin{tabular}{| l | p{10cm} |}
+  \hline
+  \textbf{Person} & \textbf{Question} \\
+  \hline
+   Mario Rossi & What is the trend of the temperature values in Trentino
+                during the decade 2015-2025?  \\
+  \hline
+  Mario Rossi & How the metheorogical facilities are distributed in the territory? \\
+  \hline
+  Mario Rossi & Which areas in Trentino have seen the highest increase in temperature over time? \\
+  \hline
+  Laura Rosa & How was the temperature on the Trentino mountains
+                during the winter of the last three years? \\
+  \hline
+  Laura Rosa &  What are the locations where rainfalls most frequently happen? \\
+  \hline
+  Laura Rosa &  What are the periods of the year where there are sunny days? \\
+  \hline
+  Luigi Verdi & Did the number of extreme climate events increased in the area around my field? \\
+  \hline
+  Luigi Verdi & What is the trend of humidity in the summer of the last three years? \\
+  \hline
+  Luigi Verdi & Did the number of rainfalls decreased over the last five years? \\
+  \hline
+   \end{tabular}
+   \captionof{table}{Competency Questions}
+\end{center}
+
+\subsection{ER Diagram}
+At this point the next step of the formalization procedure is to produce a first bone structure
+which allows us to define the involved entities more clearly. Lets first define their schemas:
+\begin{center}
+ \begin{tabular}{| l | c |}
+   \hline
+   \textbf{Etype} & \textbf{Properties} \\
+   \hline
+   Location & \textit{\textbf{location\_ID}},\textit{gps\_coordinates},\textit{name} \\
+    \hline
+   Coordinates & \textit{latitude},\textit{longitude} \\
+   \hline
+   Weather & \textit{temperature},\textit{humidity},\textit{date},
+                       \textit{wind speed},\textit{is\_sunny}  \\
+   \hline
+   MetheorogicalFacility & \textit{\textbf{facility\_ID}},\textit{name},\textit{gps\_coordinates},
+                           \textit{inauguration\_date},\textit{still\_active} \\
+   \hline
+   ClimateEvent & \textit{\textbf{event\_ID}},\textit{location},\textit{weather\_status},\textit{event\_date} \\
+   \hline
+ \end{tabular}
+ \label{Entities}
+ \captionof{table}{Informal definition of the entities}
+\end{center}
+
+\begin{figure}[h!]
+\begin{center}
+ \includegraphics[width=0.5\textwidth]{"./ER.jpg"}
+ \caption{ER diagram}
+ \label{ER}
+\end{center}
+\end{figure}
+As we can see, in the table \ref{Entities} there are some entities with a more general use, like \textit{Location} and \textit{Coordinates},
+which represents respectively the place where a specific event happens and the gps coordinates of a certain
+position. Next we find the weather conditions associated to a location, which includes
+the temperature and the humidity, the wind speed, wheter the day was sunny or not and in the end the date
+timestamp of those specific metheorogical configuration. Last we have the metheorogical facility, which
+include its foundation date togheter with its position, and the dangerous climate event happened at a specific
+location and it is associated with the weather conditions of that day. Notice how in this latter case we also
+store a further date timestamp since we want to keep track of when the catastrophe happened, which does not
+necessary match the time memorized in the Weather entity (maybe because the weather conditions are sampled
+every 24 hours, and the climate event happen in the meantime). 
+With the definition of the entities (altough informal) done it is possible now to define the ER diagram
+that declares the relationship between the subjects involved, as in figure \ref{ER}. It is interesting
+to notice how there is a one-to-one relationship between MetheorologicalFacility entity and Coordinates
+while it could be sufficient to identify a facility through the location. The main reason why such decision
+has been made is because it is possible that a metheorological station is not exactly placed inside a
+specific location but it could be in the nearby.
+
+
+\subsection{Information Gathering}
+\subsection{Evaluation - Purpose Definition}

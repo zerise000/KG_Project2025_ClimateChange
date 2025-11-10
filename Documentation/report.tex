@@ -1,0 +1,89 @@
+\documentclass{knowdive}
+\usepackage{color,soul}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{rotating}
+\graphicspath{ {images/} }
+
+\usepackage{titlesec}
+\titleformat{\section}{\LARGE\bfseries}{\thesection}{1em}{}
+
+\usepackage{array, makecell}
+%\hypersetup{
+	%pdfauthor={Author1, \and Author2},
+	%pdftitle={Collectives.State of the Art},
+       %pdfkeywords = {},
+      %pdfsubject={}
+      %}
+%\usepackage{hyperref}
+
+
+\graphicspath{ {images/} }
+\usepackage{comment}
+
+\title{Knowledge Graph course 2025 - Project Report }
+
+\author{Mattia Santaniello, Mattia Maci}
+
+\revisionhistory{
+    \revision{1}{\today}{Mayukh Bagchi}{Document created}
+}
+\newpage
+
+\fancypagestyle{plain}{
+  \fancyhf{}% Clear header/footer
+  %\fancyhead[R]{\includegraphics[width=1.0\linewidth,height=5pt]{Knowdive_color_bar}}% Right header
+  \fancyfoot[L]{\includegraphics[width=1.0\linewidth,height=45pt]{Knowdive_color_bar}}% Left footer
+  \fancyfoot[C]{Page \thepage\  / \pageref{LastPage}}
+}
+
+\pagestyle{plain}
+%\makeglossaries
+%input{glossaries}
+\begin{document}
+\maketitle
+\begin{sloppypar}
+\large
+\begin{spacing}{1.05}
+%\gls{latex}
+%\gls{batex}
+%\gls{eType}
+%\printglossary
+
+\input{section/0-introduction}
+
+\input{section/1-purpose-doi}
+
+
+%\input{ProjectReport/section/3-resources}
+
+\input{section/4-purposeFormaliation}
+
+% \input{ProjectReport/section/5-informationGathering}
+
+\input{section/6-languageDefinition}
+
+\input{section/7-knowledgeDefinition}
+
+\input{section/8-dataDefinition}
+
+\input{section/9-evaluation}
+
+\input{section/10-metadataDefinition}
+
+\input{section/11-openIssues}
+
+\end{spacing}
+\end{sloppypar}
+\end{document} 

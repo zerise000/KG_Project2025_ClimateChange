@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Project Design}{1}{section.2}%
+\contentsline {section}{\numberline {3}Purpose Definition}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Personas}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Competency Question}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}ER Diagram}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Information Gathering}{4}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Evaluation - Purpose Definition}{4}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Language Definition}{4}{section.4}%
+\contentsline {section}{\numberline {5}Knowledge Definition}{4}{section.5}%
+\contentsline {section}{\numberline {6}Entity Definition}{4}{section.6}%
+\contentsline {section}{\numberline {7}Evaluation}{4}{section.7}%
+\contentsline {section}{\numberline {8}Metadata Definition}{4}{section.8}%
+\contentsline {section}{\numberline {9}Open Issues}{4}{section.9}%
