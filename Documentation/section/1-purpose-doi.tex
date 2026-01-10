@@ -1,9 +1,24 @@
 
 \section{Project Design}
+\subsection{Purpose}
+The first step is the definition of the project’s objective.
+We start from an informal definition of our purpose, captured in the following phrase.
 
-The purpose of this project is to engineer a Knowledge Graph which models various meteorological
-facilities, and, thereby, models the climate  in the Trentino region
-during the decade 2015-2025 in order to get a complete view of the following informations:
- what are the most impacted area by the climate change
- where the major weather stations are located 
- and how the wheater and the temperature distributions evolved
+\begin{quote}
+``This project is about building a Knowledge Graph that brings together data from different weather stations to better
+understand the climate of the Trentino area during the decade 2015-2025. It helps organize and connect meteorological data in a
+smart way so users can easily explore trends and patterns. Using this graph, you can ask meaningful questions about
+temperature, rainfall, and changes over time, like:
+\begin{itemize}
+ \item what are the most impacted area by the climate change
+ \item where the major weather stations are located
+ \item and how the wheater and the temperature distributions evolved''
+\end{itemize}
+\end{quote}
+We can see how our domain of interest includes meteorological observations, spatial information about weather stations,
+and temporal aspects related to climate evolution over time.
+\subsection{information gathering}
+We gathered information from the meteotrentino website, from which we collected data from the meteorological stations on
+rainfall, temperature, humidity, wind direction, wind speed, atmospheric pressure, and solar radiation, divided by year.
+Some stations provided only part of this data, while others had missing years or unreliable measurements.
+TODO see http://storico.meteotrentino.it/web.htm

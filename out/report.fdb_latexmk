@@ -1,0 +1,20 @@
+# Fdb version 4
+["pdflatex"] 1767979500.86292 "report.tex" "/home/mattia/Desktop/KGE/progetto/KG_Project2025_ClimateChange/out/report.pdf" "report" 1767979501.27023 2
+  "/etc/texmf/web2c/texmf.cnf" 1767970069.21052 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/mattia/Desktop/KGE/progetto/KG_Project2025_ClimateChange/out/report.aux" 1767979500.86071 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1705352648 20144 147463a6a579f4597269ef9565205cfe ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1705352648 8448 dbc0dbf4156c0bb9ba01a1c685d3bad0 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty" 1642282977 1656 7e824878bad4df5a3e8bba4e463d9126 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1704491087 30006 57b07afb710ee2f649c65cfbafda39c1 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty" 1705955748 6565 cfd9fd0a1d5f5ad985151778771ff7a9 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1696969620 9327 c30c00c0072edba199ede5889311aaa9 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1767977257 8214381 6758ac2e1654d71bc8a5ba36edffe262 ""
+  "knowdive.cls" 1767979165.3008 4476 0ed5946a151c034a371bfdecb4af08c8 ""
+  "report.tex" 1767979165.3038 1879 dd91477431324124a9826c06bff2acba ""
+  (generated)
+  "/home/mattia/Desktop/KGE/progetto/KG_Project2025_ClimateChange/out/report.aux"
+  "/home/mattia/Desktop/KGE/progetto/KG_Project2025_ClimateChange/out/report.log"
+  "/home/mattia/Desktop/KGE/progetto/KG_Project2025_ClimateChange/out/report.pdf"
+  (rewritten before read)
