@@ -18,13 +18,13 @@ analyzing local climate variations, weather patterns, and their impact on the en
 now we will continue illustrating the possible scenarios:
 
 \begin{itemize}
-  \item \textbf{Mario Rossi}  is performing a research on the effects of climate change, which could be useful for some supervisor
+  \item \textbf{S1: Mario Rossi}  is performing a research on the effects of climate change, which could be useful for some supervisor
                               agencies specialized on the theme (e.g ESA). He needs to retrieve some data about the weather of the territory,
                               analyzing how the temperature has evolved over the years and how much it has drifted from the natural trend. 
-  \item \textbf{Laura Rosa}  is planning a long journey on the mountains with her friends, and she needs to know the metheorogical data of the locations
+  \item \textbf{S2: Laura Rosa}  is planning a long journey on the mountains with her friends, and she needs to know the metheorogical data of the locations
                              they are going to visit, especially the rainfall events and the sunny days of the previous years in order to make
                              decision on the logistics
-  \item \textbf{Luigi Verdi} is worried about how the climate events of the last years could affect his farming activities
+  \item \textbf{S3: Luigi Verdi} is worried about how the climate events of the last years could affect his farming activities
                              and damage his products.Agriculture is one of the sectors
                              which has been mostly affected negatively by the climate change, so he wants to be prepared
 \end{itemize}
@@ -34,10 +34,10 @@ now we will continue illustrating the possible scenarios:
 Now that the scenarios have been defined it is time to see the profiles of the users mentioned above:
 
 \begin{itemize}
-  \item \textbf{Mario Rossi} is a 26 years old researcher at the Trento university, specialized in ecology and enviromental research
-  \item \textbf{Laura Rosa} is a 30 years old woman who is also planning a trip on the mountains of the Trentino region, however
+  \item \textbf{P1: Mario Rossi} is a 26 years old researcher at the Trento university, specialized in ecology and enviromental research
+  \item \textbf{P2: Laura Rosa} is a 30 years old woman who is also planning a trip on the mountains of the Trentino region, however
                             in her case the main activity is a trekking exursion with her friends
-  \item \textbf{Luigi Verdi} is a 56 years old farmer, with a small field nearby Trento. His main products are
+  \item \textbf{P3: Luigi Verdi} is a 56 years old farmer, with a small field nearby Trento. His main products are
                              potatoes and grape, the latter one especially is cultivated in summer
                              and gathered during grape harvest period
 \end{itemize}
@@ -52,60 +52,142 @@ of Competency Questions(CQ). Some of them could be formalized in the following t
   \hline
   \textbf{Person} & \textbf{Question} \\
   \hline
-   Mario Rossi & What is the trend of the temperature values in Trentino
+   Mario Rossi & \textbf{Q1: }What is the trend of the temperature values in Trentino
                 during the decade 2015-2025?  \\
   \hline
-  Mario Rossi & How the metheorogical facilities are distributed in the territory? \\
+  Mario Rossi & \textbf{Q2: }How the metheorogical facilities are distributed in the territory? \\
   \hline
-  Mario Rossi & Which areas in Trentino have seen the highest increase in temperature over time? \\
+  Mario Rossi & \textbf{Q3: }Which areas in Trentino have seen the highest increase in temperature over time? \\
   \hline
-  Laura Rosa & How was the temperature on the Trentino mountains
+  Laura Rosa & \textbf{Q4: }How was the temperature on the Trentino mountains
                 during the winter of the last three years? \\
   \hline
-  Laura Rosa &  What are the locations where rainfalls most frequently happen? \\
+  Laura Rosa &  \textbf{Q5: }What are the locations where rainfalls most frequently happen? \\
   \hline
-  Laura Rosa &  What are the periods of the year where there are sunny days? \\
+  Laura Rosa &  \textbf{Q6: }What are the periods of the year where there are sunny days? \\
   \hline
-  Luigi Verdi & Did the number of extreme climate events increased in the area around my field? \\
+  Luigi Verdi & \textbf{Q7: }Did the number of extreme climate events increased in the area around my field? \\
   \hline
-  Luigi Verdi & What is the trend of humidity in the summer of the last three years? \\
+  Luigi Verdi & \textbf{Q8: }What is the trend of humidity in the summer of the last three years? \\
   \hline
-  Luigi Verdi & Did the number of rainfalls decreased over the last five years? \\
+  Luigi Verdi & \textbf{Q9: }Did the number of rainfalls decreased over the last five years? \\
   \hline
    \end{tabular}
    \captionof{table}{Competency Questions}
 \end{center}
+\subsection{PurposeFormalization}
+
+now from the scenarios, the personas, and the competency questions we extract a list of usefull concepts,
+During the concept identification phase, we focused on concepts that are directly required to answer the defined
+competency questions and that can be grounded in the available data sources.\\
+Based on the available datasets, the core entities required to answer the defined competency questions are
+\textbf{MeteorologicalFacility, MeteorologicalMeasurement and GeographicLocation}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{./PurposeFormalization.jpg}
+\caption{Purpose formalization overview}
+\label{fig:purpose}
+\end{figure}
+
+Structural concepts such as \textbf{Meteorological Facility} and \textbf{Meteorological Measurement} are associated with
+explicit properties, as they directly correspond to entities present in the data sources.
+Other concepts, including \textbf{temperature trend}, \textbf{climate variation} and \textbf{climate change indicators},
+are considered derived analytical notions are inferred through queries and statistical analyses over the collected measurements.
+
+Some concepts refer to concep already modeled in wikidata, therefore for this concept we linked the ID to the wikidata one
+
+
 
 \subsection{ER Diagram}
 At this point the next step of the formalization procedure is to produce a first bone structure
 which allows us to define the involved entities more clearly. Lets first define their schemas:
+
 \begin{center}
- \begin{tabular}{| l | c |}
-   \hline
-   \textbf{Etype} & \textbf{Properties} \\
-   \hline
-   Location & \textit{\textbf{location\_ID}},\textit{gps\_coordinates},\textit{name} \\
-    \hline
-   Coordinates & \textit{latitude},\textit{longitude} \\
-   \hline
-   Weather & \textit{temperature},\textit{humidity},\textit{date},
-                       \textit{wind speed},\textit{is\_sunny}  \\
-   \hline
-   MetheorogicalFacility & \textit{\textbf{facility\_ID}},\textit{name},\textit{gps\_coordinates},
-                           \textit{inauguration\_date},\textit{still\_active} \\
-   \hline
-   ClimateEvent & \textit{\textbf{event\_ID}},\textit{location},\textit{weather\_status},\textit{event\_date} \\
-   \hline
- \end{tabular}
- \label{Entities}
- \captionof{table}{Informal definition of the entities}
+\begin{tabular}{| l | p{10cm} |}
+\hline
+\textbf{Etype} & \textbf{Properties} \\
+\hline
+MeteorologicalFacility & \textit{\textbf{Tavoletta n.}},\textit{Stazione, Coordinate Est/Nord, Latitudine, Longitudine, Note}\\
+\hline
+MeteorologicalMeasurement & \textit{\textbf{ID}}, \textit{Date, Air temperature, Min air temperature, Max air temperature,
+Rain in ml, Tot rain in ml, Air relative humidity, Avg wind direction, Avg wind velocity, Atmospheric pressure, Tot solar radiation} \\
+\hline
+GeographicLocation & \textit{\textbf{ID}},\textit{nome, latitudine, longitudine}
+\end{tabular}
+\label{Entities}
+\captionof{table}{Informal definition of the entities}
 \end{center}
 
 \begin{figure}[h!]
 \begin{center}
- \includegraphics[width=0.5\textwidth]{"./ER.jpg"}
- \caption{ER diagram}
- \label{ER}
+\includegraphics[width=0.5\textwidth]{"./ER.jpg"}
+\caption{ER diagram}
+\label{ER}
+\end{center}
+\end{figure}
+\newpage
+
+As shown in Table~\ref{Entities}, the core entities of the Knowledge Graph represent the fundamental components
+required to describe and analyze meteorological data at a regional scale.
+
+
+In particular, the entity \textit{GeographicLocation} represents a generic spatial reference within the Trentino area
+and is characterized by a name and geographical coordinates, which allow the association of measurements and facilities
+to specific areas of interest.
+
+
+The entity \textit{MeteorologicalFacility} models the physical weather stations deployed in the territory. Each facility
+is uniquely identified and associated with a precise geographical location through latitude and longitude attributes.
+Additional descriptive properties, such as the station name and technical identifiers, are included to support spatial
+analysis and the study of the distribution of meteorological facilities across the region.
+
+
+Meteorological observations are modeled through the \textit{MeteorologicalMeasurement} entity, which represents a single
+measurement recorded by a meteorological facility at a given point in time. This entity includes several meteorological
+variables, such as air temperature, minimum and maximum temperature, rainfall, relative humidity, wind characteristics,
+atmospheric pressure, and solar radiation, together with a temporal reference.
+
+
+Each meteorological measurement is associated with exactly one meteorological facility, while each facility can be
+related to multiple measurements collected over time, resulting in a one-to-many relationship.
+
+
+Based on the definition of these entities, the Entity–Relationship diagram shown in Figure~\ref{ER} illustrates the
+structural organization of the Knowledge Graph. The separation between meteorological facilities, measurements, and
+geographic locations allows the model to clearly distinguish between spatial entities, observation sources, and temporal
+data. This design supports the analysis of long-term climate trends and spatial variations by enabling aggregation and
+comparison of measurements across different locations and time periods.
+
+
+\begin{comment}
+\begin{center}
+\begin{tabular}{| l | c |}
+\hline
+\textbf{Etype} & \textbf{Properties} \\
+\hline
+Location & \textit{\textbf{location\_ID}},\textit{gps\_coordinates},\textit{name} \\
+\hline
+Coordinates & \textit{latitude},\textit{longitude} \\
+\hline
+Weather & \textit{temperature},\textit{humidity},\textit{date},
+\textit{wind speed},\textit{is\_sunny}  \\
+\hline
+MetheorogicalFacility & \textit{\textbf{facility\_ID}},\textit{name},\textit{gps\_coordinates},
+\textit{inauguration\_date},\textit{still\_active} \\
+\hline
+ClimateEvent & \textit{\textbf{event\_ID}},\textit{location},\textit{weather\_status},\textit{event\_date} \\
+\hline
+\end{tabular}
+\label{Entities_}
+\captionof{table}{Informal definition of the entities}
+\end{center}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{"./ER.png"}
+\caption{ER diagram}
+\label{ER_}
 \end{center}
 \end{figure}
 As we can see, in the table \ref{Entities} there are some entities with a more general use, like \textit{Location} and \textit{Coordinates},
@@ -117,13 +199,14 @@ include its foundation date togheter with its position, and the dangerous climat
 location and it is associated with the weather conditions of that day. Notice how in this latter case we also
 store a further date timestamp since we want to keep track of when the catastrophe happened, which does not
 necessary match the time memorized in the Weather entity (maybe because the weather conditions are sampled
-every 24 hours, and the climate event happen in the meantime). 
+every 24 hours, and the climate event happen in the meantime).
 With the definition of the entities (altough informal) done it is possible now to define the ER diagram
 that declares the relationship between the subjects involved, as in figure \ref{ER}. It is interesting
 to notice how there is a one-to-one relationship between MetheorologicalFacility entity and Coordinates
 while it could be sufficient to identify a facility through the location. The main reason why such decision
 has been made is because it is possible that a metheorological station is not exactly placed inside a
 specific location but it could be in the nearby.
+\end{comment}
 
 
 \subsection{Information Gathering}

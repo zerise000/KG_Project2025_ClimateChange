@@ -1,0 +1,7 @@
+Scenarios,Personas,Competency Questions,ID,Entities,Properties,Focus
+"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q4,Q5,Q6,Q7,Q8,Q9",,Meteorological facility,"Stazione, Tavoletta n., Coordinate Est/Nord:, Latitudine:, Longitudine:, Note:
+",Common
+,,,,Meteorological measurement,"Date, Air temperature, Min air temperature, Max air temperature, 
+Rain in ml, Tot rain in ml, Air relative humidity, 
+Avg wind direction, Avg wind velocity, Atmospheric pressure, 
+Tot solar radiation",Contextual

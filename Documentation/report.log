@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.1.9)  10 JAN 2026 15:30
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.1.9)  13 JAN 2026 12:58
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -737,7 +737,7 @@ Package hyperref Info: Link coloring OFF on input line 54.
 \@outlinefile=\write4
 
 \openout4 = report.out
-<images/knowDiveUNITN.png, id=68, 668.4975pt x 137.51375pt>
+<images/knowDiveUNITN.png, id=84, 668.4975pt x 137.51375pt>
 File: images/knowDiveUNITN.png Graphic file (type png)
 <use images/knowDiveUNITN.png>
 Package luatex.def Info: images/knowDiveUNITN.png  used on input line 56.
@@ -766,7 +766,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--56
 
  []
 
-<images/Knowdive_color_bar.png, id=69, 2260.445pt x 375.4025pt>
+<images/Knowdive_color_bar.png, id=85, 2260.445pt x 375.4025pt>
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
 Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 56.
@@ -807,10 +807,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-) (./section/1-purpose-doi.tex) (./section/4-purposeFormaliation.tex
+) (./section/1-purpose-doi.tex)
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 1.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 67.
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
 
@@ -820,16 +820,12 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
-[1]
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 62.
-See the caption package documentation for explanation.
-
+[1] (./section/4-purposeFormaliation.tex
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 62.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 37.
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
+
 
 Package fancyhdr Warning: \footskip is too small (30.0pt): 
 (fancyhdr)                Make it at least 48.59483pt, for example:
@@ -838,20 +834,42 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 [2]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 87.
+(caption)                particular \caption on input line 76.
 See the caption package documentation for explanation.
 
-<images/./ER.jpg, id=113, 673.51625pt x 532.99126pt>
+File: images/Knowdive_color_bar.png Graphic file (type png)
+<use images/Knowdive_color_bar.png>
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 85.
+(luatex.def)             Requested size: 500.47267pt x 44.9948pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 48.59483pt, for example:
+(fancyhdr)                \setlength{\footskip}{48.59483pt}.
+
+[3]
+<images/./PurposeFormalization.jpg, id=141, 1606.0pt x 303.1325pt>
+File: images/./PurposeFormalization.jpg Graphic file (type jpg)
+<use images/./PurposeFormalization.jpg>
+Package luatex.def Info: images/./PurposeFormalization.jpg  used on input line 
+88.
+(luatex.def)             Requested size: 500.484pt x 94.46501pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 119.
+See the caption package documentation for explanation.
+
+<images/./ER.jpg, id=142, 519.9425pt x 693.59125pt>
 File: images/./ER.jpg Graphic file (type jpg)
 <use images/./ER.jpg>
-Package luatex.def Info: images/./ER.jpg  used on input line 92.
-(luatex.def)             Requested size: 250.24199pt x 198.03322pt.
+Package luatex.def Info: images/./ER.jpg  used on input line 124.
+(luatex.def)             Requested size: 250.24199pt x 333.80902pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 113.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 129.
 
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
@@ -859,7 +877,21 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                Make it at least 48.59483pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
-[3]) (./section/6-languageDefinition.tex) (./section/7-knowledgeDefinition.tex) (./section/8-dataDefinition.tex) (./section/9-evaluation.tex)
+[4<./images/./PurposeFormalization.jpg>]
+File: images/Knowdive_color_bar.png Graphic file (type png)
+<use images/Knowdive_color_bar.png>
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 154.
+
+(luatex.def)             Requested size: 500.47267pt x 44.9948pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 48.59483pt, for example:
+(fancyhdr)                \setlength{\footskip}{48.59483pt}.
+
+[5<./images/./ER.jpg>] Excluding 'comment' comment.)
+(./section/6-languageDefinition.tex) (./section/7-knowledgeDefinition.tex)
+(./section/8-dataDefinition.tex) (./section/9-evaluation.tex)
 (./section/10-metadataDefinition.tex) (./section/11-openIssues.tex)
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
@@ -871,18 +903,7 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                Make it at least 48.59483pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
-[4<./images/./ER.jpg>]
-File: images/Knowdive_color_bar.png Graphic file (type png)
-<use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 89.
-(luatex.def)             Requested size: 500.47267pt x 44.9948pt.
-
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 48.59483pt, for example:
-(fancyhdr)                \setlength{\footskip}{48.59483pt}.
-
-[5] 
+[6] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./report.aux)
  ***********
@@ -894,26 +915,26 @@ L3 programming layer <2024-01-22>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 889F88FD6AA7C6F4BAC2C199C9E16401;2120.
+(rerunfilecheck)             Checksum: EA85377AB52B7D030929060A3051BB98;2562.
 )
 
 Here is how much of LuaTeX's memory you used:
- 17291 strings out of 476553
+ 17320 strings out of 476553
  125027,1977958 words of node,token memory allocated
  548 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 8 attribute, 60 glue_spec,
  8 attribute_list, 1 write nodes
-   avail lists: 2:762,3:224,4:58,5:142,6:71,7:6278,8:3,9:690,10:31,11:462
- 38826 multiletter control sequences out of 65536+600000
+   avail lists: 2:603,3:258,4:54,5:174,6:83,7:5631,8:3,9:551,10:26,11:477
+ 38843 multiletter control sequences out of 65536+600000
  67 fonts using 7780575 bytes
- 94i,15n,102p,586b,766s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/fonts/truetype/msttcorefonts/Arial_Italic.ttf></usr/share/fonts/true
-type/msttcorefonts/arialbi.ttf></usr/share/fonts/truetype/msttcorefonts/Arial_Bo
+ 94i,15n,102p,586b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/fonts/truetype/msttcorefonts/arialbi.ttf></usr/share/fonts/truetype/
+msttcorefonts/Arial_Italic.ttf></usr/share/fonts/truetype/msttcorefonts/Arial_Bo
 ld.ttf></usr/share/fonts/truetype/msttcorefonts/arial.ttf>
-Output written on report.pdf (7 pages, 502465 bytes).
+Output written on report.pdf (8 pages, 736433 bytes).
 
-PDF statistics: 168 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 131072)
- 129 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 197 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 131072)
+ 161 words of extra memory for PDF output out of 10000 (max. 100000000)
 
