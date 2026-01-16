@@ -72,6 +72,8 @@ of Competency Questions(CQ). Some of them could be formalized in the following t
   \hline
   Luigi Verdi & \textbf{Q9: }Did the number of rainfalls decreased over the last five years? \\
   \hline
+  Mario Rossi & \textbf{Q10: }Did the number atmospheric pressure changed over the last decade? \\
+  \hline
    \end{tabular}
    \captionof{table}{Competency Questions}
 \end{center}
@@ -87,6 +89,7 @@ competency questions and that can be grounded in the available data sources.
 \caption{Purpose formalization overview}
 \label{fig:purpose}
 \end{figure}
+Full file in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Documentation}{PurposeFormalization.csv}
 
 Starting from the concept of \textbf{Meteorological Facility} and \textbf{Meteorological Measurement}, which are the most
 prominent entities in the dataset, we modeled all the other concepts.\\
@@ -218,7 +221,7 @@ We want to gather relevant information coherent with our purpose, in order to co
 The knowledge layer of the proposed Knowledge Graph is grounded on external semantic resources. In particular,
 \href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{Wikidata}
 is employed as the primary external knowledge source to link selected domain entities, such as Meteorological facility
-(or weather station for polysemy), the region of Trentino and so on, to well-established real-world concepts.
+(or weather station for sinonimicity), the region of Trentino and so on, to well-established real-world concepts.
 Wikidata offers a collaboratively maintained, structured knowledge base that ensures semantic consistency and
 interoperability with existing linked data resources.\\
 These resources are not directly reused as ontologies but are referenced through semantic links to provide an external
@@ -236,6 +239,150 @@ information about weatherstations in the Trentino region, including geographic c
 Measurements are composed by all of different measurement categories such as temperature, rainfall, humidity, wind,
 pressure, and solar radiation, corresponding to the main meteorological phenomena relevant to climate analysis, and relative timestamp.
 
-Explain where we took data from, how did the data look like, for each entity explain the attribute, the attribute type, why is it common/core/contextual
+\subsubsection{MetereologicalFacility}
+MetereologicalFacility, or weather station, represents the building located in a specific point of the Trentino region, this resource has the following attributes.
+\begin{itemize}
+    \item \textbf{Stazione}: (String) the name of the station
+    \item \textbf{Tavoletta n.}: (Integer) the unique identifier of the station
+    \item \textbf{Note}: (String) some additional information about hte station
+\end{itemize}
+the attributes are in italian, because the data was in italian in the website we got them.\\
+The focus is \textbf{common} because it is reusable and we linked it with a Wikidata concept
+\subsubsection{Coordinate}
+Is the poin inside of the Trentino region in which a station is located.\\
+Key attributes are
+\begin{itemize}
+    \item \textbf{CoordinateID}: (Integer) the unique identifier of the space point
+    \item \textbf{Coordinate Est/Nord} (String )represents the distance from the north pole and from the main meridian, separated by a "/"
+    \item \textbf{latitudine} (String) represents the latitude of the point
+    \item \textbf{longitudine} (String) represent the longitude of the point
+\end{itemize}
+the attributes and the name are in italian, because the data was in italian in the website we got them.\\
+The focus is \textbf{core} because it is general enough, but we didn't find a 1 to 1 correspondence
+\subsubsection{Bacino}
+Is a valley inside the Trentino region.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{NomeBacino}: (String) the name of the valley, also the unique identifier
+\end{itemize}
+the attributes and the name are in italian, because the data was in italian in the website we got them\\
+The focus is \textbf{core} because it is general enough, but we didn't find a 1 to 1 correspondence
+\subsubsection{Trentino}
+Is the region in Italy we are focusing out project on.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{TrentinoID}: (Integer) unique identifier
+\end{itemize}
+The focus is \textbf{common} because it is reusable and we linked it with a Wikidata concept
+\subsubsection{Sensor}
+Is the hardware device used to perform the actual weather measurement, is sited inside a weather station.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{SensorID}: (integer) unique identifier
+\end{itemize}
+The focus is \textbf{common} because it is reusable and we linked it with a Wikidata concept
+\subsubsection{MetereologicalMeasurement}
+The actual measurement of a weather observable.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{MetereologicalMeasurementID}: (Integer) unique identifier
+    \item \textbf{Value}: (Integer) the value of the measurement
+    \item \textbf{Unit}: (String) the unit of measurement
+\end{itemize}
+The focus is \textbf{contextual} because is to specific to be reused, and we couldn't find any fitting preexisting concept 
+\subsubsection{TempMeasurement}
+A specific kind of MetereologicalMeasurement, representing the measurement of a temperature value.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{TempMeasurementID}: (Integer) unique identifier
+    \item \textbf{statisticType}: (String) Determine if the value is a average, a minimum or a maximum
+\end{itemize}
+The focus is \textbf{contextual} because is to specific to be reused, and we couldn't find any fitting preexisting concept
+\subsubsection{RainMeasurement}
+A specific kind of MetereologicalMeasurement, representing the measurement of a rain value.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{RainMeasurementID}: (Integer) unique identifier
+\end{itemize}
+The focus is \textbf{contextual} because is to specific to be reused, and we couldn't find any fitting preexisting concept
+\subsubsection{HumidityMeasurement}
+A specific kind of MetereologicalMeasurement, representing the measurement of a humidity value.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{HumidityMeasurementID}: (Integer) unique identifier
+\end{itemize}
+The focus is \textbf{contextual} because is to specific to be reused, and we couldn't find any fitting preexisting concept
+\subsubsection{WindMeasurement}
+A specific kind of MetereologicalMeasurement, representing the measurement of a wind value.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{WindMeasurementID}: (Integer) unique identifier
+    \item \textbf{Type}: (String) Determine if the value refers to the speed or the direction
+\end{itemize}
+The focus is \textbf{contextual} because is to specific to be reused, and we couldn't find any fitting preexisting concept
+\subsubsection{PressureMeasurement}
+A specific kind of MetereologicalMeasurement, representing the measurement of a pressure value.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{PressureMeasurementID}: (Integer) unique identifier
+\end{itemize}
+The focus is \textbf{contextual} because is to specific to be reused, and we couldn't find any fitting preexisting concept
+\subsubsection{SolarRadiationMeasurement}
+A specific kind of MetereologicalMeasurement, representing the measurement of a solar radiation value.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{SolarRadiationMeasurementID}: (Integer) unique identifier
+\end{itemize}
+The focus is \textbf{contextual} because is to specific to be reused, and we couldn't find any fitting preexisting concept
+\subsubsection{ExtremeEvent}
+A specific kind of RainMeasurement or WindMeasurement with a very high value.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{ExtremeEventID}: (Integer) unique identifier
+\end{itemize}
+The focus is \textbf{Common} because even if is a specific kind of a contextual Etype, this is modeled in Wikidata
+\subsubsection{Month}
+Irregular unit of time dividing a calendar year.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{MonthValue}: (String) The name of the month, also the unique identifier
+\end{itemize}
+The focus is \textbf{common} because it is reusable and we linked it with a Wikidata concept
+\subsubsection{TimePeriod}
+temporal extent having a beginning, an end and a duration.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{Start}: (String) The moment from which the time interval starts, part of unique identifier
+    \item \textbf{End}: (String) The moment in which the time interval ends, part of unique identifier
+\end{itemize}
+The focus is \textbf{common} because it is reusable and we linked it with a Wikidata concept
+\subsubsection{Trend}
+cluster of statistical values showing how a variable is changing in time.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{TrendID}: (Integer)  unique identifier
+\end{itemize}
+The focus is \textbf{core} because it is reusable bat to specific and we didn't find a 1 to 1 correspondence in wikidata
+\subsubsection{ClimateChangeIndicator}
+A trend that shows how the climate is changing.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{ClimateChangeIndicatorID}: (Integer)  unique identifier
+\end{itemize}
+The focus is \textbf{Common} because it is reusable, and broadly used as a concept, we didn't find a wikidata correspondence
+\subsubsection{ClimateChange}
+human-caused changes to climate on Earth.\\
+Key attributes
+\begin{itemize}
+    \item \textbf{ClimateChangeID}: (Integer)  unique identifier
+\end{itemize}
+The focus is \textbf{common} because it is reusable and we linked it with a Wikidata concept
 
 \subsection{Evaluation - Purpose Definition}
+We faced some issue during the purpose definition phase, mainly we had to change the modeling, because in the beginning
+it was under modelled, and after this we made it more complex, reaching a model that we judged as over modelled, finding
+in the end a good middle ground.\\
+
+But still there are some peculiarity that we choose to keep for eventual future modification,
+for instance the Etype PressureMeasurement was not answering any competency question, so we decided to add a specific
+competency question to make it more integrated in the model, we added the competency question identified by ID Q10

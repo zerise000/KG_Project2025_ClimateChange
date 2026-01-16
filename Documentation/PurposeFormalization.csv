@@ -1,19 +1,19 @@
 Scenarios,Personas,Competency Questions,ID,Entities,Properties,Focus,Link
-"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9",Q190107,Meteorological facility,"MeteorologicalFacilityID, Stazione, Tavoletta n., Note",Common,https://www.wikidata.org/wiki/Q190107
-"S1,S2,S3","P1,P2,P3","Q1,Q3,Q4,Q5,Q6,Q7,Q8,Q9",UNITN2026KGMMC01,Meteorological measurement,"MeteorologicalMeasurementID, Val, unit",Contextual,
+"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9, Q10",Q190107,Meteorological facility,"MeteorologicalFacilityID, Stazione, Tavoletta n., Note",Common,https://www.wikidata.org/wiki/Q190107
+"S1,S2,S3","P1,P2,P3","Q1,Q3,Q4,Q5,Q6,Q7,Q8,Q9, Q10",UNITN2026KGMMC01,Meteorological measurement,"MeteorologicalMeasurementID, Val, unit",Contextual,
 "S1,S2 ","P1,P2","Q1,Q3,Q4",UNITN2026KGMMC02,TempMeasurement,"TempMeasurementID, statisticType",Contextual,
 "S2,S3","P2,P3","Q5,Q7,Q9",UNITN2026KGMMC03,RainMeasurement,RainMeasurementID,Contextual,
 S3,P3,Q8,UNITN2026KGMMC04,HumidityMeasurement,HumidityMeasurementID,Contextual,
 S3,P3,Q7,UNITN2026KGMMC05,WindMeasurement,"WindMeasurementID, Type",Contextual,
-,,,UNITN2026KGMMC06,PressureMeasurement,PressureMeasurementID,Contextual,
+,,Q10,UNITN2026KGMMC06,PressureMeasurement,PressureMeasurementID,Contextual,
 S2,P2,Q6,UNITN2026KGMMC07,SolarRadiationMeasurement,SolarRadiationMeasurementID,Contextual,
-"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9",Q5151,Month,MonthValue,Common,https://www.wikidata.org/wiki/Q5151
-"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9",Q186081,TimeInterval,"Start, End",Common,https://www.wikidata.org/wiki/Q186081
-"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9",UNITN2026KGMMC08,Coordinate,"CoordinateID, Coordinate Est/Nord, Latitudine, Longitudine",Core,
-"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9",UNITN2026KGMMC09,Bacino,NomeBacino,Core,
-"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9",Q16289,Trentino,TrentinoID,Common,https://www.wikidata.org/wiki/Q16289
-"S1,S2,S3","P1,P2,P3","Q1,Q3,Q4,Q5,Q6,Q7,Q8,Q9",Q167676,Sensor,SensorID,Common,https://www.wikidata.org/wiki/Q167676
+"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9, Q10",Q5151,Month,MonthValue,Common,https://www.wikidata.org/wiki/Q5151
+"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9, Q10",Q186081,TimeInterval,"Start, End",Common,https://www.wikidata.org/wiki/Q186081
+"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9, Q10",UNITN2026KGMMC08,Coordinate,"CoordinateID, Coordinate Est/Nord, Latitudine, Longitudine",Core,
+"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9, Q10",UNITN2026KGMMC09,Bacino,NomeBacino,Core,
+"S1,S2,S3","P1,P2,P3","Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9, Q10",Q16289,Trentino,TrentinoID,Common,https://www.wikidata.org/wiki/Q16289
+"S1,S2,S3","P1,P2,P3","Q1,Q3,Q4,Q5,Q6,Q7,Q8,Q9, Q10",Q167676,Sensor,SensorID,Common,https://www.wikidata.org/wiki/Q167676
 S3,P3,Q7,Q1277161,Extreme events,ExtremeEventsID,Common,https://www.wikidata.org/wiki/Q1277161
-"S1,S2,S3","P1,P2,P3","Q1,Q3,Q5,Q6,Q7,Q8,Q9",UNITN2026KGMMC10,Trend,TrendID,Core,
-"S1,S2,S3","P1,P2,P3","Q1,Q3,Q5,Q6,Q8,Q9",UNITN2026KGMMC11,Climate change indicator,ClimateChangeIndicatorID,Common,
-"S1,S2,S3","P1,P2,P3","Q1,Q3,Q5,Q6,Q8,Q9",Q125928,Climate change,ClimateChangeID,Common,https://www.wikidata.org/wiki/Q125928
+"S1,S2,S3","P1,P2,P3","Q1,Q3,Q5,Q6,Q7,Q8,Q9, Q10",UNITN2026KGMMC10,Trend,TrendID,Core,
+"S1,S2,S3","P1,P2,P3","Q1,Q3,Q5,Q6,Q8,Q9, Q10",UNITN2026KGMMC11,Climate change indicator,ClimateChangeIndicatorID,Common,
+"S1,S2,S3","P1,P2,P3","Q1,Q3,Q5,Q6,Q8,Q9, Q10",Q125928,Climate change,ClimateChangeID,Common,https://www.wikidata.org/wiki/Q125928
