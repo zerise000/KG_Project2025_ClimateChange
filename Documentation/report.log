@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.1.9)  16 JAN 2026 17:12
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.1.9)  16 JAN 2026 17:15
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -1057,7 +1057,7 @@ Here is how much of LuaTeX's memory you used:
 </usr/share/fonts/truetype/msttcorefonts/Arial_Italic.ttf></usr/share/fonts/true
 type/msttcorefonts/Arial_Bold.ttf></usr/share/fonts/truetype/msttcorefonts/arial
 .ttf>
-Output written on report.pdf (15 pages, 1062735 bytes).
+Output written on report.pdf (15 pages, 1074875 bytes).
 
 PDF statistics: 327 PDF objects out of 1000 (max. 8388607)
  291 compressed objects within 3 object streams

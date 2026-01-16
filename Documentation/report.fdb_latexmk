@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1768579956.05743 "report.tex" "report.pdf" "report" 1768579957.87347 0
+["lualatex"] 1768580128.82918 "report.tex" "report.pdf" "report" 1768580130.74564 0
   "/home/mattia/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arial-bold.luc" 1767979184.34708 142007 ecb09952324c7c08f03712997aa549fe ""
   "/home/mattia/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arial-italic.luc" 1767979184.37208 101342 b7b0fae8d8830363618a8ecc807bd4b3 ""
   "/home/mattia/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arial.luc" 1767979184.27708 141416 fa6ddd807eec1129214ac1cecce59705 ""
@@ -172,14 +172,14 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1767977214.07296 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1767977345 12240803 94c145b040a9d0e49a6eefdbe726115d ""
   "images/./ER.png" 1768573697.28905 174689 5b5a467c26238f17e00cf91db1e0568e ""
-  "images/./PurposeFormalization.jpg" 1768579602.4477 545798 eac28ab3226971c5dc5b0b80d6f90139 ""
+  "images/./PurposeFormalization.jpg" 1768580099.43587 557939 38fecb07d5322e805ef4d861205fc7cc ""
   "images/Knowdive_color_bar.png" 1768062001.24864 212038 61c9f9d4e717cc1b2205107628cb8c06 ""
   "images/knowDiveUNITN.png" 1768062001.24864 112478 ea78646f3d9e2fc2d2bdefad11beae7a ""
   "knowdive.cls" 1768062001.24964 4476 0ed5946a151c034a371bfdecb4af08c8 ""
-  "report.aux" 1768579957.68195 5610 5be271abfb3fc618d637c8e85a58e982 "lualatex"
-  "report.out" 1768579957.68295 5055 bda2238f1982758650e0545f4561afa5 "lualatex"
+  "report.aux" 1768580130.54063 5610 5be271abfb3fc618d637c8e85a58e982 "lualatex"
+  "report.out" 1768580130.54163 5055 bda2238f1982758650e0545f4561afa5 "lualatex"
   "report.tex" 1768062001.25264 1879 dd91477431324124a9826c06bff2acba ""
-  "report.toc" 1768579957.68295 3182 b58464fa518d025f3e2e2c0adb1ab490 "lualatex"
+  "report.toc" 1768580130.54263 3182 b58464fa518d025f3e2e2c0adb1ab490 "lualatex"
   "section/0-introduction.tex" 1768062001.25264 1309 2e9243f392a302373cdf4ca26a4e5193 ""
   "section/1-purpose-doi.tex" 1768062001.25264 1465 4319c4b1f9c1978f2b2865cc6875fae2 ""
   "section/10-metadataDefinition.tex" 1768062001.25264 30 868247065d0ecd974bbd6c376903db4f ""
