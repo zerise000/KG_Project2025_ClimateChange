@@ -64,7 +64,7 @@ of Competency Questions(CQ). Some of them could be formalized in the following t
   \hline
   Laura Rosa &  \textbf{Q5: }What are the locations where rainfalls most frequently happen? \\
   \hline
-  Laura Rosa &  \textbf{Q6: }What are the periods of the year where there are sunny days? \\
+  Laura Rosa &  \textbf{Q6: }What are the periods of the year where there are more sun radiations? \\
   \hline
   Luigi Verdi & \textbf{Q7: }Did the number of extreme climate events increased in the area around my field? \\
   \hline
@@ -79,9 +79,7 @@ of Competency Questions(CQ). Some of them could be formalized in the following t
 
 now from the scenarios, the personas, and the competency questions we extract a list of usefull concepts,
 During the concept identification phase, we focused on concepts that are directly required to answer the defined
-competency questions and that can be grounded in the available data sources.\\
-Based on the available datasets, the core entities required to answer the defined competency questions are
-\textbf{MeteorologicalFacility, MeteorologicalMeasurement and GeographicLocation}.
+competency questions and that can be grounded in the available data sources.
 
 \begin{figure}[h!]
 \centering
@@ -90,19 +88,32 @@ Based on the available datasets, the core entities required to answer the define
 \label{fig:purpose}
 \end{figure}
 
-Structural concepts such as \textbf{Meteorological Facility} and \textbf{Meteorological Measurement} are associated with
-explicit properties, as they directly correspond to entities present in the data sources.
-Other concepts, including \textbf{temperature trend}, \textbf{climate variation} and \textbf{climate change indicators},
-are considered derived analytical notions are inferred through queries and statistical analyses over the collected measurements.
+Starting from the concept of \textbf{Meteorological Facility} and \textbf{Meteorological Measurement}, which are the most
+prominent entities in the dataset, we modeled all the other concepts.\\
 
-Some concepts refer to concep already modeled in wikidata, therefore for this concept we linked the ID to the wikidata one
+About the \textbf{Meteorological Facility} we had data about the coordinates, so we decided to model the concept of
+\textbf{coordinates} and consequently the concept of \textbf{Bacino}, being the station located inside a "Bacino" in our dataset,
+and the concept of \textbf{Trentino}.\\
 
+Similarly for the \textbf{Meteorological Measurement} we modeled the concept of \textbf{Month} and \textbf{TimeInterval}, representing
+the moment, with different granularity, in which the measurement took place.\\
 
+having different types of \textbf{Meteorological Measurement}, we modeled the hierarchical concepts of \textbf{TempMeasurement},
+\textbf{RainMeasurement}, \textbf{HumidityMeasurement}, \textbf{WindMeasurement}, \textbf{PressureMeasurement},
+\textbf{SolarRadiationMeasurement}.\\
+
+To ontologically split the concept of \textbf{Meteorological Facility} and \textbf{Meteorological Measurement} we modeled
+the concept of \textbf{Sensor}, so the \textbf{Meteorological Facility} contains \textbf{Sensors}, which performs \textbf{Meteorological Measurement}.
+We modeled the concept of \textbf{Trend}.
+\textbf{Trend} is a \textbf{Climate change indicator}, which is pert of \textbf{Climate change}.\\
+
+Some concepts refer to concepts already modeled in wikidata, therefore for this concept we linked the ID to the wikidata one,
+for their nature the concept with contextual focus are not very reusable so cannot be linked to preexisting concepts
 
 \subsection{ER Diagram}
 At this point the next step of the formalization procedure is to produce a first bone structure
 which allows us to define the involved entities more clearly. Lets first define their schemas:
-
+\begin{comment}
 \begin{center}
 \begin{tabular}{| l | p{10cm} |}
 \hline
@@ -118,46 +129,35 @@ GeographicLocation & \textit{\textbf{ID}},\textit{nome, latitudine, longitudine}
 \label{Entities}
 \captionof{table}{Informal definition of the entities}
 \end{center}
+\end{comment}
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.5\textwidth]{"./ER.jpg"}
+\includegraphics[width=\textwidth]{"./ER.png"}
 \caption{ER diagram}
 \label{ER}
 \end{center}
 \end{figure}
-\newpage
 
-As shown in Table~\ref{Entities}, the core entities of the Knowledge Graph represent the fundamental components
-required to describe and analyze meteorological data at a regional scale.
+In Figure~\ref{fig:purpose}, the core entities of the Knowledge Graph represent the fundamental components required to
+describe and analyze meteorological data at a regional scale.
 
+The entity \textbf{Trentino} represents the Trentino region of Italy, while \textbf{Bacino} models the main valley
+within this region. \textbf{Coordinate} represents specific points in space corresponding to the location of
+meteorological facilities.
 
-In particular, the entity \textit{GeographicLocation} represents a generic spatial reference within the Trentino area
-and is characterized by a name and geographical coordinates, which allow the association of measurements and facilities
-to specific areas of interest.
+The entity \textbf{Meteorological facility} represents a weather station, which hosts one or more \textbf{Sensors},
+each capable of observing specific meteorological phenomena. \textbf{Meteorological measurement} represents a generic
+observation, with temporal information captured by \textbf{Month} and \textbf{TimeInterval}.
+Specific types of measurements, such as temperature (average, minimum, or maximum, recorded via \textit{statisticType}),
+rainfall, humidity, wind (speed and direction), pressure, and solar radiation, are modeled as specialized entities linked
+to Meteorological measurement, \textbf{ExtremeEvent} represents unusually high or low values of rainfall or wind.
 
-
-The entity \textit{MeteorologicalFacility} models the physical weather stations deployed in the territory. Each facility
-is uniquely identified and associated with a precise geographical location through latitude and longitude attributes.
-Additional descriptive properties, such as the station name and technical identifiers, are included to support spatial
-analysis and the study of the distribution of meteorological facilities across the region.
-
-
-Meteorological observations are modeled through the \textit{MeteorologicalMeasurement} entity, which represents a single
-measurement recorded by a meteorological facility at a given point in time. This entity includes several meteorological
-variables, such as air temperature, minimum and maximum temperature, rainfall, relative humidity, wind characteristics,
-atmospheric pressure, and solar radiation, together with a temporal reference.
-
-
-Each meteorological measurement is associated with exactly one meteorological facility, while each facility can be
-related to multiple measurements collected over time, resulting in a one-to-many relationship.
-
-
-Based on the definition of these entities, the Entity–Relationship diagram shown in Figure~\ref{ER} illustrates the
-structural organization of the Knowledge Graph. The separation between meteorological facilities, measurements, and
-geographic locations allows the model to clearly distinguish between spatial entities, observation sources, and temporal
-data. This design supports the analysis of long-term climate trends and spatial variations by enabling aggregation and
-comparison of measurements across different locations and time periods.
+\textbf{Trend}: Each Trend instance represents a concrete climate indicator
+computed for a specific geographic area and a specific time interval, computed from Meteorological measurements and representing
+long-term variations. Each \textbf{Trend} instance is computed from more \textbf{Meteorological measurement} and is a
+\textbf{ClimateChangeIndicator}, which in turn is part of \textbf{ClimateChange}, ClimateChange is modeled as a high-level
+abstract concept, not directly associated with specific observations, but represented through derived indicators such as Trends.
 
 
 \begin{comment}

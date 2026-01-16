@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.1.9)  13 JAN 2026 12:58
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.1.9)  16 JAN 2026 13:39
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -839,7 +839,7 @@ See the caption package documentation for explanation.
 
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 85.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 83.
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
 Package fancyhdr Warning: \footskip is too small (30.0pt): 
@@ -847,29 +847,46 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
 [3]
-<images/./PurposeFormalization.jpg, id=141, 1606.0pt x 303.1325pt>
+<images/./PurposeFormalization.jpg, id=141, 1606.0pt x 764.8575pt>
 File: images/./PurposeFormalization.jpg Graphic file (type jpg)
 <use images/./PurposeFormalization.jpg>
 Package luatex.def Info: images/./PurposeFormalization.jpg  used on input line 
-88.
-(luatex.def)             Requested size: 500.484pt x 94.46501pt.
+86.
+(luatex.def)             Requested size: 500.484pt x 238.35214pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
+
+ []
 
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 119.
-See the caption package documentation for explanation.
+Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
-<images/./ER.jpg, id=142, 519.9425pt x 693.59125pt>
-File: images/./ER.jpg Graphic file (type jpg)
-<use images/./ER.jpg>
-Package luatex.def Info: images/./ER.jpg  used on input line 124.
-(luatex.def)             Requested size: 250.24199pt x 333.80902pt.
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 101--104
+[]\TU/Arial(0)/m/n/12 hav-ing dif-fer-ent types of \TU/Arial(0)/b/n/12 Me-te-o-r
+o-log-i-cal Mea-sure-ment\TU/Arial(0)/m/n/12 , we mod-eled the hi-er-ar-chi-cal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--109
+
+ []
 
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 129.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 113.
 
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
@@ -877,10 +894,15 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                Make it at least 48.59483pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
-[4<./images/./PurposeFormalization.jpg>]
+[4<./images/./PurposeFormalization.jpg>] Excluding 'comment' comment.
+<images/./ER.png, id=150, 1253.68375pt x 990.70125pt>
+File: images/./ER.png Graphic file (type png)
+<use images/./ER.png>
+Package luatex.def Info: images/./ER.png  used on input line 136.
+(luatex.def)             Requested size: 500.484pt x 395.50252pt.
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 154.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 155.
 
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
@@ -889,7 +911,7 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                Make it at least 48.59483pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
-[5<./images/./ER.jpg>] Excluding 'comment' comment.)
+[5<./images/./ER.png>] Excluding 'comment' comment.)
 (./section/6-languageDefinition.tex) (./section/7-knowledgeDefinition.tex)
 (./section/8-dataDefinition.tex) (./section/9-evaluation.tex)
 (./section/10-metadataDefinition.tex) (./section/11-openIssues.tex)
@@ -919,22 +941,22 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 17320 strings out of 476553
+ 17317 strings out of 476553
  125027,1977958 words of node,token memory allocated
  548 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 8 attribute, 60 glue_spec,
  8 attribute_list, 1 write nodes
-   avail lists: 2:603,3:258,4:54,5:174,6:83,7:5631,8:3,9:551,10:26,11:477
- 38843 multiletter control sequences out of 65536+600000
- 67 fonts using 7780575 bytes
- 94i,15n,102p,586b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/fonts/truetype/msttcorefonts/arialbi.ttf></usr/share/fonts/truetype/
-msttcorefonts/Arial_Italic.ttf></usr/share/fonts/truetype/msttcorefonts/Arial_Bo
-ld.ttf></usr/share/fonts/truetype/msttcorefonts/arial.ttf>
-Output written on report.pdf (8 pages, 736433 bytes).
+   avail lists: 2:603,3:258,4:54,5:174,6:83,7:5631,8:3,9:548,10:29,11:448
+ 38841 multiletter control sequences out of 65536+600000
+ 66 fonts using 7625847 bytes
+ 94i,14n,102p,586b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/fonts/truetype/msttcorefonts/Arial_Italic.ttf></usr/share/fonts/true
+type/msttcorefonts/Arial_Bold.ttf></usr/share/fonts/truetype/msttcorefonts/arial
+.ttf>
+Output written on report.pdf (8 pages, 951086 bytes).
 
-PDF statistics: 197 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 131072)
+PDF statistics: 188 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 131072)
  161 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -203,9 +203,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT ./images/Knowdive_color_bar.png
 INPUT ./images/./PurposeFormalization.jpg
 INPUT ./images/./PurposeFormalization.jpg
-INPUT ./images/./ER.jpg
-INPUT ./images/./ER.jpg
 INPUT ./images/Knowdive_color_bar.png
+INPUT ./images/./ER.png
+INPUT ./images/./ER.png
 INPUT ./images/Knowdive_color_bar.png
 INPUT ./section/6-languageDefinition.tex
 INPUT ./section/7-knowledgeDefinition.tex
