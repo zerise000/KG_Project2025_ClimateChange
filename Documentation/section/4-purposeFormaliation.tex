@@ -21,7 +21,7 @@ now we will continue illustrating the possible scenarios:
   \item \textbf{S1: Mario Rossi}  is performing a research on the effects of climate change, which could be useful for some supervisor
                               agencies specialized on the theme (e.g ESA). He needs to retrieve some data about the weather of the territory,
                               analyzing how the temperature has evolved over the years and how much it has drifted from the natural trend. 
-  \item \textbf{S2: Laura Rosa}  is planning a long journey on the mountains with her friends, and she needs to know the metheorogical data of the locations
+  \item \textbf{S2: Laura Rosa}  is planning a long journey on the mountains with her friends, and she needs to know the meteorological data of the locations
                              they are going to visit, especially the rainfall events and the sunny days of the previous years in order to make
                              decision on the logistics
   \item \textbf{S3: Luigi Verdi} is worried about how the climate events of the last years could affect his farming activities
@@ -44,7 +44,7 @@ Now that the scenarios have been defined it is time to see the profiles of the u
 
 \subsection{Competency Question}
 
-Each Persona has to deal with different scenarios, which could be incapsuleted in the definition
+Each Persona has to deal with different scenarios, which could be encapsulated in the definition
 of Competency Questions(CQ). Some of them could be formalized in the following table
 
 \begin{center}
@@ -77,7 +77,7 @@ of Competency Questions(CQ). Some of them could be formalized in the following t
 \end{center}
 \subsection{PurposeFormalization}
 
-now from the scenarios, the personas, and the competency questions we extract a list of usefull concepts,
+now from the scenarios, the personas, and the competency questions we extract a list of useful concepts,
 During the concept identification phase, we focused on concepts that are directly required to answer the defined
 competency questions and that can be grounded in the available data sources.
 
@@ -210,4 +210,32 @@ specific location but it could be in the nearby.
 
 
 \subsection{Information Gathering}
+
+here we provide an overview of the data used in input for this project, including resources using different languages.
+
+We want to gather relevant information coherent with our purpose, in order to construct a meaningful knowledge graph.
+
+The knowledge layer of the proposed Knowledge Graph is grounded on external semantic resources. In particular,
+\href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{Wikidata}
+is employed as the primary external knowledge source to link selected domain entities, such as Meteorological facility
+(or weather station for polysemy), the region of Trentino and so on, to well-established real-world concepts.
+Wikidata offers a collaboratively maintained, structured knowledge base that ensures semantic consistency and
+interoperability with existing linked data resources.\\
+These resources are not directly reused as ontologies but are referenced through semantic links to provide an external
+grounding for key concepts.
+The adopted formal knowledge resources can be classified as \textbf{common} resources, as Wikidata provides general-purpose
+concepts widely used across multiple domains, No core or contextual domain-specific ontologies were directly reused.\\
+
+Additional domain ontologies were considered during the design phase but were not directly adopted in order to preserve
+model simplicity and avoid unnecessary complexity.\\
+\\
+
+The data layer of the Knowledge Graph is built on meteorological measurements and weather stations collected from the
+open-access repository \href{http://storico.meteotrentino.it/web.htm}{meteotrentino}. The dataset provides detailed
+information about weatherstations in the Trentino region, including geographic coordinates, macro-areas and station ID and name.
+Measurements are composed by all of different measurement categories such as temperature, rainfall, humidity, wind,
+pressure, and solar radiation, corresponding to the main meteorological phenomena relevant to climate analysis, and relative timestamp.
+
+Explain where we took data from, how did the data look like, for each entity explain the attribute, the attribute type, why is it common/core/contextual
+
 \subsection{Evaluation - Purpose Definition}

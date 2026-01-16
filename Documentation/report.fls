@@ -201,11 +201,15 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT ./images/Knowdive_color_bar.png
-INPUT ./images/./PurposeFormalization.jpg
-INPUT ./images/./PurposeFormalization.jpg
+INPUT /usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf
+INPUT /usr/share/texlive/texmf-dist/tex/luatex/luaotfload/luaotfload-glyphlist.lua
+OUTPUT /home/mattia/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.lua
+INPUT /home/mattia/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.lua
+OUTPUT /home/mattia/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
 INPUT ./images/Knowdive_color_bar.png
 INPUT ./images/./ER.png
 INPUT ./images/./ER.png
+INPUT ./images/Knowdive_color_bar.png
 INPUT ./images/Knowdive_color_bar.png
 INPUT ./section/6-languageDefinition.tex
 INPUT ./section/7-knowledgeDefinition.tex

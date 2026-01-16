@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.1.9)  16 JAN 2026 13:39
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.1.9)  16 JAN 2026 15:28
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -847,12 +847,20 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
 [3]
-<images/./PurposeFormalization.jpg, id=141, 1606.0pt x 764.8575pt>
-File: images/./PurposeFormalization.jpg Graphic file (type jpg)
-<use images/./PurposeFormalization.jpg>
-Package luatex.def Info: images/./PurposeFormalization.jpg  used on input line 
-86.
-(luatex.def)             Requested size: 500.484pt x 238.35214pt.
+
+LaTeX Warning: File `./PurposeFormalization.jpg' not found on input line 86.
+
+
+! Package luatex.def Error: File `./PurposeFormalization.jpg' not found: using 
+draft setting.
+
+See the luatex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 ...idth=\textwidth]{./PurposeFormalization.jpg}
+                                                  
+? 
 
 Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
@@ -863,7 +871,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
  []
 
+File: images/Knowdive_color_bar.png Graphic file (type png)
+<use images/Knowdive_color_bar.png>
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 97.
+(luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 48.59483pt, for example:
+(fancyhdr)                \setlength{\footskip}{48.59483pt}.
+
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
@@ -884,25 +901,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--109
 
  []
 
-File: images/Knowdive_color_bar.png Graphic file (type png)
-<use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 113.
-
-(luatex.def)             Requested size: 500.47267pt x 44.9948pt.
-
-Package fancyhdr Warning: \footskip is too small (30.0pt): 
-(fancyhdr)                Make it at least 48.59483pt, for example:
-(fancyhdr)                \setlength{\footskip}{48.59483pt}.
-
-[4<./images/./PurposeFormalization.jpg>] Excluding 'comment' comment.
-<images/./ER.png, id=150, 1253.68375pt x 990.70125pt>
+Excluding 'comment' comment.
+<images/./ER.png, id=150, 1200.485pt x 1065.9825pt>
 File: images/./ER.png Graphic file (type png)
 <use images/./ER.png>
 Package luatex.def Info: images/./ER.png  used on input line 136.
-(luatex.def)             Requested size: 500.484pt x 395.50252pt.
+(luatex.def)             Requested size: 500.484pt x 444.40768pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Excluding 'comment' comment.
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 155.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 216.
 
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
@@ -911,8 +923,32 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                Make it at least 48.59483pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
-[5<./images/./ER.png>] Excluding 'comment' comment.)
-(./section/6-languageDefinition.tex) (./section/7-knowledgeDefinition.tex)
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 218--228
+
+ []
+
+File: images/Knowdive_color_bar.png Graphic file (type png)
+<use images/Knowdive_color_bar.png>
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 228.
+
+(luatex.def)             Requested size: 500.47267pt x 44.9948pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 48.59483pt, for example:
+(fancyhdr)                \setlength{\footskip}{48.59483pt}.
+
+[6<./images/./ER.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 229--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--232
+
+ []
+
+) (./section/6-languageDefinition.tex) (./section/7-knowledgeDefinition.tex)
 (./section/8-dataDefinition.tex) (./section/9-evaluation.tex)
 (./section/10-metadataDefinition.tex) (./section/11-openIssues.tex)
 File: images/Knowdive_color_bar.png Graphic file (type png)
@@ -925,7 +961,7 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                Make it at least 48.59483pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
-[6] 
+[7] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./report.aux)
  ***********
@@ -936,27 +972,30 @@ L3 programming layer <2024-01-22>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: EA85377AB52B7D030929060A3051BB98;2562.
 )
 
 Here is how much of LuaTeX's memory you used:
- 17317 strings out of 476553
+ 17344 strings out of 476553
  125027,1977958 words of node,token memory allocated
  548 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 8 attribute, 60 glue_spec,
  8 attribute_list, 1 write nodes
-   avail lists: 2:603,3:258,4:54,5:174,6:83,7:5631,8:3,9:548,10:29,11:448
- 38841 multiletter control sequences out of 65536+600000
- 66 fonts using 7625847 bytes
- 94i,14n,102p,586b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/fonts/truetype/msttcorefonts/Arial_Italic.ttf></usr/share/fonts/true
-type/msttcorefonts/Arial_Bold.ttf></usr/share/fonts/truetype/msttcorefonts/arial
-.ttf>
-Output written on report.pdf (8 pages, 951086 bytes).
+   avail lists: 2:603,3:258,4:54,5:174,6:83,7:6875,8:3,9:548,10:29,11:759
+ 38864 multiletter control sequences out of 65536+600000
+ 67 fonts using 7751935 bytes
+ 94i,15n,102p,586b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/font
+s/truetype/msttcorefonts/Arial_Italic.ttf></usr/share/fonts/truetype/msttcorefon
+ts/Arial_Bold.ttf></usr/share/fonts/truetype/msttcorefonts/arial.ttf>
+Output written on report.pdf (9 pages, 508556 bytes).
 
-PDF statistics: 188 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 131072)
+PDF statistics: 202 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 131072)
  161 words of extra memory for PDF output out of 10000 (max. 100000000)
 
