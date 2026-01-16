@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.1.9)  16 JAN 2026 17:08
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.1.9)  16 JAN 2026 17:12
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -918,33 +918,25 @@ Package luatex.def Info: images/./ER.png  used on input line 139.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Excluding 'comment' comment.
-Underfull \hbox (badness 10000) in paragraph at lines 221--231
-
- []
-
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 231.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 214.
 
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
+
 
 Package fancyhdr Warning: \footskip is too small (30.0pt): 
 (fancyhdr)                Make it at least 48.59483pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
+Underfull \hbox (badness 10000) in paragraph at lines 222--232
 
  []
 
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 241.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 232.
 
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
@@ -953,12 +945,20 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
 [6<./images/./ER.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 233--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--236
+
+ []
+
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 274.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 263.
 
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
-
 
 Package fancyhdr Warning: \footskip is too small (30.0pt): 
 (fancyhdr)                Make it at least 48.59483pt, for example:
@@ -967,7 +967,7 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 [7]
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 308.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 298.
 
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
@@ -979,7 +979,7 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 [8]
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 337.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 331.
 
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
@@ -991,7 +991,7 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 [9]
 File: images/Knowdive_color_bar.png Graphic file (type png)
 <use images/Knowdive_color_bar.png>
-Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 373.
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 364.
 
 (luatex.def)             Requested size: 500.47267pt x 44.9948pt.
 
@@ -1001,7 +1001,7 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 382--385
+Underfull \hbox (badness 10000) in paragraph at lines 383--386
 
  []
 
@@ -1018,7 +1018,18 @@ Package fancyhdr Warning: \footskip is too small (30.0pt):
 (fancyhdr)                Make it at least 48.59483pt, for example:
 (fancyhdr)                \setlength{\footskip}{48.59483pt}.
 
-[11] 
+[11]
+File: images/Knowdive_color_bar.png Graphic file (type png)
+<use images/Knowdive_color_bar.png>
+Package luatex.def Info: images/Knowdive_color_bar.png  used on input line 89.
+(luatex.def)             Requested size: 500.47267pt x 44.9948pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 48.59483pt, for example:
+(fancyhdr)                \setlength{\footskip}{48.59483pt}.
+
+[12] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./report.aux)
  ***********
@@ -1034,22 +1045,22 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 17379 strings out of 476553
+ 17383 strings out of 476553
  125027,1977958 words of node,token memory allocated
  548 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 2 glyph, 8 attribute, 60 glue_spec,
  8 attribute_list, 1 write nodes
-   avail lists: 2:869,3:393,4:126,5:319,6:122,7:7778,8:3,9:646,10:29,11:804
+   avail lists: 2:869,3:393,4:126,5:319,6:122,7:5634,8:3,9:646,10:29,11:601
  38862 multiletter control sequences out of 65536+600000
  66 fonts using 7625847 bytes
- 94i,14n,102p,586b,697s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,14n,102p,586b,745s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/truetype/msttcorefonts/Arial_Italic.ttf></usr/share/fonts/true
 type/msttcorefonts/Arial_Bold.ttf></usr/share/fonts/truetype/msttcorefonts/arial
 .ttf>
-Output written on report.pdf (14 pages, 1062300 bytes).
+Output written on report.pdf (15 pages, 1062735 bytes).
 
-PDF statistics: 321 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 131072)
+PDF statistics: 327 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 131072)
  305 words of extra memory for PDF output out of 10000 (max. 100000000)
 

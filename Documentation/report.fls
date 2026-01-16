@@ -220,5 +220,6 @@ INPUT ./section/9-evaluation.tex
 INPUT ./section/10-metadataDefinition.tex
 INPUT ./section/11-openIssues.tex
 INPUT ./images/Knowdive_color_bar.png
+INPUT ./images/Knowdive_color_bar.png
 INPUT ./report.aux
 INPUT ./report.out
