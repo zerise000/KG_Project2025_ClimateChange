@@ -1,0 +1,288 @@
+Prefix(:=<http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5>
+
+Declaration(Class(<Q125928#ClimateChange>))
+Declaration(Class(<Q1277161#ExtremeEvents>))
+Declaration(Class(<Q16289#Trentino>))
+Declaration(Class(<Q167676#Sensor>))
+Declaration(Class(<Q186081#TimeInterval>))
+Declaration(Class(<Q190107#MetereologicalFacility>))
+Declaration(Class(<Q22664#Coordinates>))
+Declaration(Class(<Q39816#Valley>))
+Declaration(Class(<Q5151#Month>))
+Declaration(Class(<UNITN2026KGMMC01#MeteorologicalMeasurement>))
+Declaration(Class(<UNITN2026KGMMC02#TempMeasurement>))
+Declaration(Class(<UNITN2026KGMMC03#RainMeasurement>))
+Declaration(Class(<UNITN2026KGMMC04#HumidityMeasurement>))
+Declaration(Class(<UNITN2026KGMMC05#WindMeasurement>))
+Declaration(Class(<UNITN2026KGMMC06#PressureMeasurement>))
+Declaration(Class(<UNITN2026KGMMC07#SolarRadiationMeasurement>))
+Declaration(Class(<UNITN2026KGMMC09#ClimateChangeIndicator>))
+Declaration(Class(<UNITN2026KGMMC09#Trend>))
+Declaration(ObjectProperty(<UNITN2026KGMMC21#Part_of>))
+Declaration(ObjectProperty(<UNITN2026KGMMC22#Is_in_region>))
+Declaration(ObjectProperty(<UNITN2026KGMMC23#Is_in_valley>))
+Declaration(ObjectProperty(<UNITN2026KGMMC24#located_in>))
+Declaration(ObjectProperty(<UNITN2026KGMMC25#Contains>))
+Declaration(ObjectProperty(<UNITN2026KGMMC27#Calculated_from>))
+Declaration(ObjectProperty(<UNITN2026KGMMC27#Measures>))
+Declaration(ObjectProperty(<UNITN2026KGMMC28#Referred_to_valley>))
+Declaration(ObjectProperty(<UNITN2026KGMMC29#Referred_to_period>))
+Declaration(ObjectProperty(<UNITN2026KGMMC30#Measured_at>))
+Declaration(ObjectProperty(<UNITN2026KGMMC31#Contained_in>))
+Declaration(ObjectProperty(<UNITN2026KGMMC32#Classified_from>))
+Declaration(DataProperty(<Q34027#Has_latitude>))
+Declaration(DataProperty(<Q36477#Has_longitude>))
+Declaration(DataProperty(<Q56413401#Has_month_name>))
+Declaration(DataProperty(<UNITN2026KGMMC10#Has_valley_name>))
+Declaration(DataProperty(<UNITN2026KGMMC11#has_Est/Nord_coordinates>))
+Declaration(DataProperty(<UNITN2026KGMMC12#Has_metereological_facility_name>))
+Declaration(DataProperty(<UNITN2026KGMMC13#Has_number>))
+Declaration(DataProperty(<UNITN2026KGMMC14#Has_notes>))
+Declaration(DataProperty(<UNITN2026KGMMC15#Has_val>))
+Declaration(DataProperty(<UNITN2026KGMMC17#Has_statistic_type>))
+Declaration(DataProperty(<UNITN2026KGMMC18#Has_type_of_wind_measure>))
+Declaration(DataProperty(<UNITN2026KGMMC19#Has_start_moment>))
+Declaration(DataProperty(<UNITN2026KGMMC20#Has_end_moment>))
+Declaration(DataProperty(<http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5#Has_unit>))
+Declaration(AnnotationProperty(owl:exactMatch))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <UNITN2026KGMMC22#Is_in_region> (<UNITN2026KGMMC22#Is_in_region>)
+
+ObjectPropertyDomain(<UNITN2026KGMMC22#Is_in_region> <Q39816#Valley>)
+ObjectPropertyRange(<UNITN2026KGMMC22#Is_in_region> <Q16289#Trentino>)
+
+# Object Property: <UNITN2026KGMMC23#Is_in_valley> (<UNITN2026KGMMC23#Is_in_valley>)
+
+ObjectPropertyDomain(<UNITN2026KGMMC23#Is_in_valley> <Q22664#Coordinates>)
+ObjectPropertyRange(<UNITN2026KGMMC23#Is_in_valley> <Q39816#Valley>)
+
+# Object Property: <UNITN2026KGMMC24#located_in> (<UNITN2026KGMMC24#located_in>)
+
+ObjectPropertyDomain(<UNITN2026KGMMC24#located_in> <Q190107#MetereologicalFacility>)
+ObjectPropertyRange(<UNITN2026KGMMC24#located_in> <Q22664#Coordinates>)
+
+# Object Property: <UNITN2026KGMMC25#Contains> (<UNITN2026KGMMC25#Contains>)
+
+ObjectPropertyDomain(<UNITN2026KGMMC25#Contains> <Q190107#MetereologicalFacility>)
+ObjectPropertyRange(<UNITN2026KGMMC25#Contains> <Q167676#Sensor>)
+
+# Object Property: <UNITN2026KGMMC27#Calculated_from> (<UNITN2026KGMMC27#Calculated_from>)
+
+ObjectPropertyDomain(<UNITN2026KGMMC27#Calculated_from> <UNITN2026KGMMC09#Trend>)
+ObjectPropertyRange(<UNITN2026KGMMC27#Calculated_from> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+
+# Object Property: <UNITN2026KGMMC27#Measures> (<UNITN2026KGMMC27#Measures>)
+
+ObjectPropertyDomain(<UNITN2026KGMMC27#Measures> <Q167676#Sensor>)
+ObjectPropertyRange(<UNITN2026KGMMC27#Measures> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+
+# Object Property: <UNITN2026KGMMC28#Referred_to_valley> (<UNITN2026KGMMC28#Referred_to_valley>)
+
+ObjectPropertyDomain(<UNITN2026KGMMC28#Referred_to_valley> <UNITN2026KGMMC09#Trend>)
+ObjectPropertyRange(<UNITN2026KGMMC28#Referred_to_valley> <Q39816#Valley>)
+
+# Object Property: <UNITN2026KGMMC29#Referred_to_period> (<UNITN2026KGMMC29#Referred_to_period>)
+
+ObjectPropertyDomain(<UNITN2026KGMMC29#Referred_to_period> <UNITN2026KGMMC09#Trend>)
+ObjectPropertyRange(<UNITN2026KGMMC29#Referred_to_period> <Q186081#TimeInterval>)
+
+# Object Property: <UNITN2026KGMMC30#Measured_at> (<UNITN2026KGMMC30#Measured_at>)
+
+ObjectPropertyDomain(<UNITN2026KGMMC30#Measured_at> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+ObjectPropertyRange(<UNITN2026KGMMC30#Measured_at> <Q5151#Month>)
+
+# Object Property: <UNITN2026KGMMC31#Contained_in> (<UNITN2026KGMMC31#Contained_in>)
+
+ObjectPropertyDomain(<UNITN2026KGMMC31#Contained_in> <Q5151#Month>)
+ObjectPropertyRange(<UNITN2026KGMMC31#Contained_in> <Q186081#TimeInterval>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <Q34027#Has_latitude> (<Q34027#Has_latitude>)
+
+AnnotationAssertion(rdfs:comment <Q34027#Has_latitude> "angle between zenith and a plane parallel to the equator")
+AnnotationAssertion(owl:exactMatch <Q34027#Has_latitude> "https://www.wikidata.org/wiki/Q34027")
+DataPropertyDomain(<Q34027#Has_latitude> <Q22664#Coordinates>)
+DataPropertyRange(<Q34027#Has_latitude> xsd:string)
+
+# Data Property: <Q36477#Has_longitude> (<Q36477#Has_longitude>)
+
+AnnotationAssertion(rdfs:comment <Q36477#Has_longitude> "geographic coordinate that specifies the east-west position of a point on the Earth's surface")
+AnnotationAssertion(owl:exactMatch <Q36477#Has_longitude> "https://www.wikidata.org/wiki/Q36477")
+DataPropertyDomain(<Q36477#Has_longitude> <Q22664#Coordinates>)
+DataPropertyRange(<Q36477#Has_longitude> xsd:string)
+
+# Data Property: <Q56413401#Has_month_name> (<Q56413401#Has_month_name>)
+
+AnnotationAssertion(rdfs:comment <Q56413401#Has_month_name> "name of the month")
+AnnotationAssertion(owl:exactMatch <Q56413401#Has_month_name> "https://www.wikidata.org/wiki/Q56413401")
+DataPropertyDomain(<Q56413401#Has_month_name> <Q5151#Month>)
+DataPropertyRange(<Q56413401#Has_month_name> xsd:string)
+
+# Data Property: <UNITN2026KGMMC10#Has_valley_name> (<UNITN2026KGMMC10#Has_valley_name>)
+
+AnnotationAssertion(rdfs:comment <UNITN2026KGMMC10#Has_valley_name> "name of one of the valley")
+DataPropertyDomain(<UNITN2026KGMMC10#Has_valley_name> <Q39816#Valley>)
+DataPropertyRange(<UNITN2026KGMMC10#Has_valley_name> xsd:string)
+
+# Data Property: <UNITN2026KGMMC11#has_Est/Nord_coordinates> (<UNITN2026KGMMC11#has_Est/Nord_coordinates>)
+
+AnnotationAssertion(rdfs:comment <UNITN2026KGMMC11#has_Est/Nord_coordinates> "Est/Nord coordinate of a point in space")
+DataPropertyDomain(<UNITN2026KGMMC11#has_Est/Nord_coordinates> <Q22664#Coordinates>)
+DataPropertyRange(<UNITN2026KGMMC11#has_Est/Nord_coordinates> xsd:string)
+
+# Data Property: <UNITN2026KGMMC12#Has_metereological_facility_name> (<UNITN2026KGMMC12#Has_metereological_facility_name>)
+
+AnnotationAssertion(rdfs:comment <UNITN2026KGMMC12#Has_metereological_facility_name> "Name of a metereological facility")
+DataPropertyDomain(<UNITN2026KGMMC12#Has_metereological_facility_name> <Q190107#MetereologicalFacility>)
+DataPropertyRange(<UNITN2026KGMMC12#Has_metereological_facility_name> xsd:string)
+
+# Data Property: <UNITN2026KGMMC13#Has_number> (<UNITN2026KGMMC13#Has_number>)
+
+AnnotationAssertion(rdfs:comment <UNITN2026KGMMC13#Has_number> "number of metereological facility")
+DataPropertyDomain(<UNITN2026KGMMC13#Has_number> <Q190107#MetereologicalFacility>)
+DataPropertyRange(<UNITN2026KGMMC13#Has_number> xsd:integer)
+
+# Data Property: <UNITN2026KGMMC14#Has_notes> (<UNITN2026KGMMC14#Has_notes>)
+
+AnnotationAssertion(rdfs:comment <UNITN2026KGMMC14#Has_notes> "notes about a metereological facility")
+DataPropertyDomain(<UNITN2026KGMMC14#Has_notes> <Q190107#MetereologicalFacility>)
+DataPropertyRange(<UNITN2026KGMMC14#Has_notes> xsd:string)
+
+# Data Property: <UNITN2026KGMMC15#Has_val> (<UNITN2026KGMMC15#Has_val>)
+
+AnnotationAssertion(rdfs:comment <UNITN2026KGMMC15#Has_val> "the value of the metereological mesurment")
+DataPropertyDomain(<UNITN2026KGMMC15#Has_val> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+DataPropertyRange(<UNITN2026KGMMC15#Has_val> xsd:float)
+
+# Data Property: <UNITN2026KGMMC17#Has_statistic_type> (<UNITN2026KGMMC17#Has_statistic_type>)
+
+AnnotationAssertion(rdfs:comment <UNITN2026KGMMC17#Has_statistic_type> "average, min or max")
+DataPropertyDomain(<UNITN2026KGMMC17#Has_statistic_type> <UNITN2026KGMMC02#TempMeasurement>)
+DataPropertyRange(<UNITN2026KGMMC17#Has_statistic_type> xsd:string)
+
+# Data Property: <UNITN2026KGMMC18#Has_type_of_wind_measure> (<UNITN2026KGMMC18#Has_type_of_wind_measure>)
+
+AnnotationAssertion(rdfs:comment <UNITN2026KGMMC18#Has_type_of_wind_measure> "Wind speed or wind direction")
+DataPropertyDomain(<UNITN2026KGMMC18#Has_type_of_wind_measure> <UNITN2026KGMMC05#WindMeasurement>)
+DataPropertyRange(<UNITN2026KGMMC18#Has_type_of_wind_measure> xsd:string)
+
+# Data Property: <UNITN2026KGMMC19#Has_start_moment> (<UNITN2026KGMMC19#Has_start_moment>)
+
+AnnotationAssertion(rdfs:comment <UNITN2026KGMMC19#Has_start_moment> "start of a time interval")
+DataPropertyDomain(<UNITN2026KGMMC19#Has_start_moment> <Q186081#TimeInterval>)
+DataPropertyRange(<UNITN2026KGMMC19#Has_start_moment> xsd:string)
+
+# Data Property: <UNITN2026KGMMC20#Has_end_moment> (<UNITN2026KGMMC20#Has_end_moment>)
+
+AnnotationAssertion(rdfs:comment <UNITN2026KGMMC20#Has_end_moment> "end of time interval")
+DataPropertyDomain(<UNITN2026KGMMC20#Has_end_moment> <Q186081#TimeInterval>)
+DataPropertyRange(<UNITN2026KGMMC20#Has_end_moment> xsd:string)
+
+# Data Property: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5#Has_unit> (<http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5#Has_unit>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5#Has_unit> "Measurment unit of meterological measurment")
+DataPropertyDomain(<http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5#Has_unit> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+DataPropertyRange(<http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5#Has_unit> xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <Q125928#ClimateChange> (<Q125928#ClimateChange>)
+
+AnnotationAssertion(rdfs:comment <Q125928#ClimateChange> "human-caused changes to climate on Earth")
+AnnotationAssertion(owl:exactMatch <Q125928#ClimateChange> "https://www.wikidata.org/wiki/Q125928")
+
+# Class: <Q1277161#ExtremeEvents> (<Q1277161#ExtremeEvents>)
+
+AnnotationAssertion(rdfs:comment <Q1277161#ExtremeEvents> "unusual, severe or unseasonal weather")
+AnnotationAssertion(owl:exactMatch <Q1277161#ExtremeEvents> "https://www.wikidata.org/wiki/Q1277161")
+SubClassOf(<Q1277161#ExtremeEvents> ObjectUnionOf(ObjectSomeValuesFrom(<UNITN2026KGMMC32#Classified_from> <UNITN2026KGMMC03#RainMeasurement>) ObjectSomeValuesFrom(<UNITN2026KGMMC32#Classified_from> <UNITN2026KGMMC05#WindMeasurement>)))
+
+# Class: <Q16289#Trentino> (<Q16289#Trentino>)
+
+AnnotationAssertion(rdfs:comment <Q16289#Trentino> "autonomous province of Italy")
+AnnotationAssertion(owl:exactMatch <Q16289#Trentino> "https://www.wikidata.org/wiki/Q16289")
+
+# Class: <Q167676#Sensor> (<Q167676#Sensor>)
+
+AnnotationAssertion(rdfs:comment <Q167676#Sensor> "device that measures a physical quantity and converts it into a signal")
+AnnotationAssertion(owl:exactMatch <Q167676#Sensor> "https://www.wikidata.org/wiki/Q167676")
+
+# Class: <Q186081#TimeInterval> (<Q186081#TimeInterval>)
+
+AnnotationAssertion(rdfs:comment <Q186081#TimeInterval> "temporal extent having a beginning, an end and a duration")
+AnnotationAssertion(owl:exactMatch <Q186081#TimeInterval> "https://www.wikidata.org/wiki/Q186081")
+
+# Class: <Q190107#MetereologicalFacility> (<Q190107#MetereologicalFacility>)
+
+AnnotationAssertion(rdfs:comment <Q190107#MetereologicalFacility> "set of sensors that record and provide physical measurements and meteorological parameters")
+AnnotationAssertion(owl:exactMatch <Q190107#MetereologicalFacility> "https://www.wikidata.org/wiki/Q190107")
+
+# Class: <Q22664#Coordinates> (<Q22664#Coordinates>)
+
+AnnotationAssertion(rdfs:comment <Q22664#Coordinates> "system to specify locations on Earth")
+AnnotationAssertion(owl:exactMatch <Q22664#Coordinates> "https://www.wikidata.org/wiki/Q22664")
+
+# Class: <Q39816#Valley> (<Q39816#Valley>)
+
+AnnotationAssertion(rdfs:comment <Q39816#Valley> "low area between hills, often with a river running through it")
+AnnotationAssertion(owl:exactMatch <Q39816#Valley> "https://www.wikidata.org/wiki/Q39816")
+
+# Class: <Q5151#Month> (<Q5151#Month>)
+
+AnnotationAssertion(rdfs:comment <Q5151#Month> "irregular unit of time dividing a calendar year")
+AnnotationAssertion(owl:exactMatch <Q5151#Month> "https://www.wikidata.org/wiki/Q5151")
+
+# Class: <UNITN2026KGMMC02#TempMeasurement> (<UNITN2026KGMMC02#TempMeasurement>)
+
+SubClassOf(<UNITN2026KGMMC02#TempMeasurement> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+
+# Class: <UNITN2026KGMMC03#RainMeasurement> (<UNITN2026KGMMC03#RainMeasurement>)
+
+SubClassOf(<UNITN2026KGMMC03#RainMeasurement> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+
+# Class: <UNITN2026KGMMC04#HumidityMeasurement> (<UNITN2026KGMMC04#HumidityMeasurement>)
+
+SubClassOf(<UNITN2026KGMMC04#HumidityMeasurement> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+
+# Class: <UNITN2026KGMMC05#WindMeasurement> (<UNITN2026KGMMC05#WindMeasurement>)
+
+SubClassOf(<UNITN2026KGMMC05#WindMeasurement> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+
+# Class: <UNITN2026KGMMC06#PressureMeasurement> (<UNITN2026KGMMC06#PressureMeasurement>)
+
+SubClassOf(<UNITN2026KGMMC06#PressureMeasurement> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+
+# Class: <UNITN2026KGMMC07#SolarRadiationMeasurement> (<UNITN2026KGMMC07#SolarRadiationMeasurement>)
+
+SubClassOf(<UNITN2026KGMMC07#SolarRadiationMeasurement> <UNITN2026KGMMC01#MeteorologicalMeasurement>)
+
+# Class: <UNITN2026KGMMC09#ClimateChangeIndicator> (<UNITN2026KGMMC09#ClimateChangeIndicator>)
+
+SubClassOf(<UNITN2026KGMMC09#ClimateChangeIndicator> ObjectSomeValuesFrom(<UNITN2026KGMMC21#Part_of> <Q125928#ClimateChange>))
+
+# Class: <UNITN2026KGMMC09#Trend> (<UNITN2026KGMMC09#Trend>)
+
+SubClassOf(<UNITN2026KGMMC09#Trend> <UNITN2026KGMMC09#ClimateChangeIndicator>)
+
+
+)

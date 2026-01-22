@@ -89,7 +89,7 @@ competency questions and that can be grounded in the available data sources.
 \caption{Purpose formalization overview}
 \label{fig:purpose}
 \end{figure}
-Full file in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Documentation}{PurposeFormalization.csv}
+Full file in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Phase%201%20-%20Purpose%20Definition}{PurposeFormalization.xlsx}
 
 Starting from the concept of \textbf{Meteorological Facility} and \textbf{Meteorological Measurement}, which are the most
 prominent entities in the dataset, we modeled all the other concepts.\\
@@ -110,7 +110,7 @@ the concept of \textbf{Sensor}, so the \textbf{Meteorological Facility} contains
 We modeled the concept of \textbf{Trend}.
 \textbf{Trend} is a \textbf{Climate change indicator}, which is pert of \textbf{Climate change}.\\
 
-Some concepts refer to concepts already modeled in wikidata, therefore for this concept we linked the ID to the wikidata one,
+Some concepts refer to concepts already modeled in wikidata, therefore for this concept we linked the ID to the wikidata one,--------------------------------------------------------------------------------------------------------
 for their nature the concept with contextual focus are not very reusable so cannot be linked to preexisting concepts
 
 \subsection{ER Diagram}
@@ -141,6 +141,7 @@ GeographicLocation & \textit{\textbf{ID}},\textit{nome, latitudine, longitudine}
 \label{ER}
 \end{center}
 \end{figure}
+full diagram in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Phase%201%20-%20Purpose%20Definition}{ER.drawio}
 
 In Figure~\ref{fig:purpose}, the core entities of the Knowledge Graph represent the fundamental components required to
 describe and analyze meteorological data at a regional scale.
@@ -220,7 +221,7 @@ here we provide an overview of the data used in input for this project, includin
 We want to gather relevant information coherent with our purpose, in order to construct a meaningful knowledge graph.
 
 The knowledge layer of the proposed Knowledge Graph is grounded on external semantic resources. In particular,
-\href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{Wikidata}
+\href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{Wikidata}------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 is employed as the primary external knowledge source to link selected domain entities, such as Meteorological facility
 (or weather station for sinonimicity), the region of Trentino and so on, to well-established real-world concepts.
 Wikidata offers a collaboratively maintained, structured knowledge base that ensures semantic consistency and
@@ -259,7 +260,7 @@ Key attributes are
     \item \textbf{longitudine} (String) represent the longitude of the point
 \end{itemize}
 the attributes and the name are in italian, because the data was in italian in the website we got them.\\
-The focus is \textbf{core} because it is general enough, but we didn't find a 1 to 1 correspondence
+The focus is \textbf{common} because it is reusable and we linked it with a Wikidata concept
 \subsubsection{Bacino}
 Is a valley inside the Trentino region.\\
 Key attributes
@@ -267,7 +268,7 @@ Key attributes
     \item \textbf{NomeBacino}: (String) the name of the valley, also the unique identifier
 \end{itemize}
 the attributes and the name are in italian, because the data was in italian in the website we got them\\
-The focus is \textbf{core} because it is general enough, but we didn't find a 1 to 1 correspondence
+The focus is \textbf{common} because it is reusable and we linked it with a Wikidata concept
 \subsubsection{Trentino}
 Is the region in Italy we are focusing out project on.\\
 Key attributes
@@ -370,7 +371,7 @@ Key attributes
 \begin{itemize}
     \item \textbf{ClimateChangeIndicatorID}: (Integer)  unique identifier
 \end{itemize}
-The focus is \textbf{Common} because it is reusable, and broadly used as a concept, we didn't find a wikidata correspondence
+The focus is \textbf{core} because it is reusable bat to specific and we didn't find a 1 to 1 correspondence in wikidata
 \subsubsection{ClimateChange}
 human-caused changes to climate on Earth.\\
 Key attributes
