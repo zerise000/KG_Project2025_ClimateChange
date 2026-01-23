@@ -214,7 +214,14 @@ INPUT ./images/Knowdive_color_bar.png
 INPUT ./images/Knowdive_color_bar.png
 INPUT ./images/Knowdive_color_bar.png
 INPUT ./section/6-languageDefinition.tex
+INPUT ./images/Knowdive_color_bar.png
 INPUT ./section/7-knowledgeDefinition.tex
+INPUT ./images/./EER.png
+INPUT ./images/./EER.png
+INPUT ./images/Knowdive_color_bar.png
+INPUT ./images/Knowdive_color_bar.png
+INPUT ./images/./Protegeetypes.jpeg
+INPUT ./images/./Protegeetypes.jpeg
 INPUT ./section/8-dataDefinition.tex
 INPUT ./section/9-evaluation.tex
 INPUT ./section/10-metadataDefinition.tex

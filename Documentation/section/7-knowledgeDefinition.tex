@@ -1,2 +1,45 @@
 \section{Knowledge Definition}
+The knowledge definition phase of the \textit{iTelos} methodology consists on the construction of the knowledge graph
+by formalizing and aligning the information gathered so far and create a unified knowledge representation via a teleontology.
 
+We want to go step by step, starting from the output of the previous layer, we want to build a extended entity relation model,
+to explicit the entity types, the object properties and the data properties as well as the hierarchy of the entity typs.
+we modified the ER model taking advantage from the developed domain language
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=\textwidth]{"./EER.png"}
+\caption{EER diagram}
+\label{EER}
+\end{center}
+\end{figure}
+\newpage
+full diagram in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Phase%203%20-%20Knowledge%20Definition}{EER.drawio}
+
+From this we edit the ontology by using Protègè, a specific tool that through its UI allowed us to define entity types, object properties
+and data properties, to build a solid ontology, and to link our work to a well established set of concepts.
+The sesult of this work can be found in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Phase%203%20-%20Knowledge%20Definition}{UNITN2026KGMM\_Knowledge\_definition.ofn}.
+
+
+in Protègè we started by creating all the entity types, ang assigning to each a specific concept ID, as seen in the language
+definition phase some concept was tailored made for this project, like TempMeasurement, while some other are referred to
+wikidata concepts, Wikidata was adopted as reference knowledge resource for concept alignment, due to its rich coverage of
+geographical entities and environmental concepts relevant to the project domain, for these concepts we populated the exactMatch
+annotation with the link to the wikidata page, we modeled the hierarchy as shown in the EER model, we also modeled Climate change
+indicator as contained in the climate change concept, and extreme event as a part of the union of WindMeasurement and RainMeasurement.
+
+
+We did the same with data properties populating also the domain and range records, the domain is the entity type the data property
+is referred to, and the range is eather Integer, Float or String.
+
+
+Lastly for the object properties again we modelled all the ID, and the domain and range records, where the domain is the
+subject of the relationship and the range is the object.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics{"./Protegeetypes.jpeg"}
+\caption{Protegeetypes}
+\label{Protegeetypes}
+\end{center}
+\end{figure}
+Here we can see a piece of the representation, showing the Etypes hierarchy
