@@ -34,6 +34,10 @@
 \contentsline {subsection}{\numberline {4.1}concept identification}{12}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Knowledge Definition}{12}{section.5}%
 \contentsline {section}{\numberline {6}Entity Definition}{15}{section.6}%
-\contentsline {section}{\numberline {7}Evaluation}{15}{section.7}%
-\contentsline {section}{\numberline {8}Metadata Definition}{15}{section.8}%
-\contentsline {section}{\numberline {9}Open Issues}{15}{section.9}%
+\contentsline {subsection}{\numberline {6.1}Objectives}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Entity Matching}{15}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Entity Identification}{15}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Entity Mapping}{15}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Evaluation}{16}{section.7}%
+\contentsline {section}{\numberline {8}Metadata Definition}{16}{section.8}%
+\contentsline {section}{\numberline {9}Open Issues}{16}{section.9}%

@@ -1,1 +1,51 @@
 \section{Entity Definition}
+This phase describe the entity definition phase
+
+\subsection{Objectives}
+This is the final spet in \textit{iTelos} metodology, merging the knowledgeand data layers into a unified Knowledge Graph,
+The input are: data resources, and the teleontology developed in previous phase.
+To do so, we have to teke care of the heterogeneity in the data layer, in this layer heterogeneity is shown in 3 different
+ways
+
+\begin{itemize}
+    \item \textbf{Entity Matching}: resolves discrepancies in the representation of real-world entities across
+different datasets, considering both schema and data-level heterogeneity.
+    \item \textbf{Entity Identification}: ensures each entity is uniquely identified, using either existing iden-
+tifiers or constructed identifying sets.
+    \item \textbf{Entity Mapping}: combines the teleontology with corresponding data values in the
+datasets, generating the final KG.
+\end{itemize}
+
+\subsection{Entity Matching}
+In our project, we gathered data from one single source, because it were sufficiently large to develop a KG respecting 
+our purpose, this makes the entity matching problem trivial
+
+\subsection{Entity Identification}
+In this section we ensure thet each entity in the set is uniquely identified, we created specific identifiers.
+In some cases we already had data property used as IDs (like weather stations), in other (like the measurements), we
+created a specific ID, we want to highlight the entity of TimeInterval, which has an identifying set, composed by
+staring time and ending time.
+
+\subsection{Entity Mapping}
+Entity mapping integrates the teleontology with the datasets by defining the relationships between entity types and
+their data values.
+
+We did so by \href{https://usc-isi-i2.github.io/karma/}{Karma} tool. The output of this phas is in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Phase%204%20-%20Entity%20Definition}{Entity Definition}
+of our repository, in the following images we can see a graphical representation
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=\textwidth]{"./Entity_1.jpeg"}
+\caption{Visualization of the matching of the measurment to the teloeontology}
+\label{Entity_1.jpeg}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=\textwidth]{"./Entity_2.jpeg"}
+\caption{Visualization of the matching of the weather station to the teloeontology}
+\label{Entity_2.jpeg}
+\end{center}
+\end{figure}
+\newpage

@@ -1,0 +1,480 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#exactMatch"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC21#Part_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC21#Part_of"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC22#Is_in_region -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC22#Is_in_region">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q39816#Valley"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q16289#Trentino"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC23#Is_in_valley -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC23#Is_in_valley">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q22664#Coordinates"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q39816#Valley"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC24#located_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC24#located_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q190107#MetereologicalFacility"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q22664#Coordinates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC25#Contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC25#Contains">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q190107#MetereologicalFacility"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q167676#Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC27#Calculated_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC27#Calculated_from">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC09#Trend"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC27#Measures -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC27#Measures">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q167676#Sensor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC28#Referred_to_valley -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC28#Referred_to_valley">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC09#Trend"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q39816#Valley"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC29#Referred_to_period -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC29#Referred_to_period">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC09#Trend"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q186081#TimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC30#Measured_at -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC30#Measured_at">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q5151#Month"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC31#Contained_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC31#Contained_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q5151#Month"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q186081#TimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC32#Classified_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC32#Classified_from"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5#Has_unit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5#Has_unit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Measurment unit of meterological measurment</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q34027#Has_latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q34027#Has_latitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q22664#Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>angle between zenith and a plane parallel to the equator</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q34027</owl:exactMatch>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q36477#Has_longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q36477#Has_longitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q22664#Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>geographic coordinate that specifies the east-west position of a point on the Earth&apos;s surface</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q36477</owl:exactMatch>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q56413401#Has_month_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q56413401#Has_month_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q5151#Month"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>name of the month</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q56413401</owl:exactMatch>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC10#Has_valley_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC10#Has_valley_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q39816#Valley"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>name of one of the valley</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC11#has_Est/Nord_coordinates -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC11#has_Est/Nord_coordinates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q22664#Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Est/Nord coordinate of a point in space</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC12#Has_metereological_facility_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC12#Has_metereological_facility_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q190107#MetereologicalFacility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of a metereological facility</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC13#Has_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC13#Has_number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q190107#MetereologicalFacility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>number of metereological facility</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC14#Has_notes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC14#Has_notes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q190107#MetereologicalFacility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>notes about a metereological facility</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC15#Has_val -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC15#Has_val">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>the value of the metereological mesurment</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC17#Has_statistic_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC17#Has_statistic_type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC02#TempMeasurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>average, min or max</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC18#Has_type_of_wind_measure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC18#Has_type_of_wind_measure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC05#WindMeasurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Wind speed or wind direction</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC19#Has_start_moment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC19#Has_start_moment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q186081#TimeInterval"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>start of a time interval</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC20#Has_end_moment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC20#Has_end_moment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q186081#TimeInterval"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>end of time interval</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q125928#ClimateChange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q125928#ClimateChange">
+        <rdfs:comment>human-caused changes to climate on Earth</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q125928</owl:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q1277161#ExtremeEvents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q1277161#ExtremeEvents">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC32#Classified_from"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC03#RainMeasurement"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC32#Classified_from"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC05#WindMeasurement"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>unusual, severe or unseasonal weather</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q1277161</owl:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q16289#Trentino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q16289#Trentino">
+        <rdfs:comment>autonomous province of Italy</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q16289</owl:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q167676#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q167676#Sensor">
+        <rdfs:comment>device that measures a physical quantity and converts it into a signal</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q167676</owl:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q186081#TimeInterval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q186081#TimeInterval">
+        <rdfs:comment>temporal extent having a beginning, an end and a duration</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q186081</owl:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q190107#MetereologicalFacility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q190107#MetereologicalFacility">
+        <rdfs:comment>set of sensors that record and provide physical measurements and meteorological parameters</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q190107</owl:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q22664#Coordinates -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q22664#Coordinates">
+        <rdfs:comment>system to specify locations on Earth</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q22664</owl:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q39816#Valley -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q39816#Valley">
+        <rdfs:comment>low area between hills, often with a river running through it</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q39816</owl:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q5151#Month -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q5151#Month">
+        <rdfs:comment>irregular unit of time dividing a calendar year</rdfs:comment>
+        <owl:exactMatch>https://www.wikidata.org/wiki/Q5151</owl:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC02#TempMeasurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC02#TempMeasurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC03#RainMeasurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC03#RainMeasurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC04#HumidityMeasurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC04#HumidityMeasurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC05#WindMeasurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC05#WindMeasurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC06#PressureMeasurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC06#PressureMeasurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC07#SolarRadiationMeasurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC07#SolarRadiationMeasurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC01#MeteorologicalMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC09#ClimateChangeIndicator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC09#ClimateChangeIndicator">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC21#Part_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q125928#ClimateChange"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC09#Trend -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC09#Trend">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC09#ClimateChangeIndicator"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

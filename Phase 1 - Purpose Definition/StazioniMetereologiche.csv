@@ -1,0 +1,25 @@
+Stazione,Tavoletta N,Note,coordinateEst/Nord,Latitudine,Longitudine,Bacino
+T0101,32060010,ATTIVA - TP - POSIZIONI PRECEDENTI: dal 01/01/1935 al 13/02/2002 in 660013 E/5113793 N/Q 205 msmm,660529/5113570,46°09’24.5” N,11°04’44.6” E,Bacino del fiume Adige
+T0129,32 060100,ATTIVA - M - Palo vento 5 m,665157/5104242.5,46°04’18.5” N,11°08’08.5” E,Bacino del fiume Adige
+T0135,32 060100,"ATTIVA - M - Palo vento 10 m - Dal 30/04/2008 al 03/08/2012 sovrapposizione in 662425E/5106819N, 194 msmm (stazione Metex duplicata)",662432/5106821,46°05’44.3” N,11°06’04.9” E,Bacino del fiume Adige
+T0008,1 045050,"MN - Gestita da IASMA - Palo vento 5 m - ID MTX: 002; ID DB_CM5800: 7002 (stazione IASMA) dal 09/07/2012 non venivano più scaricati i dati per cambio DL da MTX a NESA; dal 25/11/2012 ripreso importazione con id ""T0008"" anzichè ""T0353"" COD UNVM 8PAN ",711553/5132107.7,46°18’34.3” N,11°44’51.0” E,Bacino del fiume Avisio
+T0059,32 044160,ATTIVA - TP,700189.5/5126284.5,46°15’38.2” N,11°35’51.4” E,Bacino del fiume Avisio
+T0092,32 028110,"ATTIVA - TP - periodo METEX registrato con C.E. 447 Posizioni precedenti: dal 01/01/1938 al 26/10/2012 in E719790/N514336/2040 msmm, C.E. 305; dal 24/11/2011 posizione attuale",719834/5149034,46°27’32.5” N,11°51’46.3” E,Bacino del fiume Avisio
+T0009,32 081030,"ATTIVA - TP POSIZIONI PRECEDENTI: dal 01/12/1929 al 30/06/1992: 672967E/5093105N, 830 msmm; dal 30/07/1992 posizione attuale",673089/5093157,45°58’12.5” N,11°14’03.0” E,Bacino del fiume Brenta
+T0010,32 060160,ATTIVA - M - Palo vento 10 m - periodo NESA registrato con C.E. 447 POSIZIONI PRECEDENTI: dal 01/01/1981 al 24/03/2005 in 678440.0_E/5097825.0_N/502_Q (Sito Levico (Terme) - Ufficio Idrografico - COD.HYDSTRA T0010) dal 17/08/2004 posizione attuale,678457/5097804,46°00’38.0” N,11°18’18.5” E,Bacino del fiume Brenta
+T0014,32 061060,"ATTIVA - TP - POSIZIONI PRECEDENTI: dal 01/01/1923 al 31/12/1990: 692585E/5109975N, 935 msmm, C.E. 66; dal 17/07/1985 posizione attuale",692750/5109941,46°06’56.9” N,11°29’40.2” E,Bacino del fiume Brenta
+T0354,32 080130,ATTIVA - MN - Palo vento 10 m COD UNVM 15TR,630778/5077834,45°50’30.0” N,10°41’02.9” E,Bacino del fiume Chiese
+T0373,32 058110,"ATTIVA - MN - Palo vento 10 m, nivometro 4.6 m. (COD.EL. UNVM 21) POSIZIONI PRECEDENTI: dal 01/01/1960 al 31/10/2005 TP in 617115.0_E/5101252.0_N/1792_Q (Sito Diga Ufficio Idrografico COD.ZEUS 1800) dal 03/10/2002 posizione attuale",617129.7/5101039.9,46°03’10.5” N,10°30’50.8” E,Bacino del fiume Chiese
+T0393,32 079150,ATTIVA - TP - Stazione presso sito IASMA,621317/5078209.5,45°50’48.4” N,10°33’44.8” E,Bacino del fiume Chiese
+T0024,32 062030,"ATTIVA - TP - POSIZIONI PRECEDENTI: dal 01/01/1978 al 31/12/1990 in 724301E/5119673N, 1369 msmm; dal 30/11/1990 al 28/09/2006 in 724294E/5119710N, 1375 msmm; dal 22/06/2006 posizione attuale --- dal 13/09/2007 sovrapposizione in 724921E/5119912N, 1322 msmm",724970/5119947,46°11’45.3” N,11°54’56.6” E,Bacino del fiume Cismon
+T0027,32 062070,ATTIVA - TPN - Palo nivometro 5 m - POSIZIONI PRECEDENTI: stazione cartacea dal 31/12/1980 al 14/05/2010 in 719244E/5113365N 1030 msmm,719299/5113379.5,46°08’19.4” N,11°50’21.4” E,Bacino del fiume Cismon
+T0419,32 045150,ATTIVA - TPN - Palo nivometro 5 m - Palo vento 6 m da 09/19,721095/5120143,46°11’56.2” N,11°51’56.4” E,Bacino del fiume Cismon
+T0065,32 025130,ATTIVA - M - Palo vento 3 m,630560/5142404,46°25’21.3” N,10°41’56.8” E,Bacino del fiume Noce
+T0066,1 025130,ATTIVA - MN - Studio Servizio Geologico Permafrost,631782/5142479,46°25’22.9” N,10°42’54.1” E,Bacino del fiume Noce
+T0071,32 042060,"ATTIVA - M - Palo vento 10 m POSIZIONI PRECEDENTI: dal 01/01/1921 al 07/12/2004 in 638501E/5130917N, 935 msmm; dal 07/12/2004 posizione attuale e dal 31/08/2007 sovrapposizione in 638265E/5130435N, 905 msmm",638273/5130427,46°18’47.9” N,10°47’45.3” E,Bacino del fiume Noce
+T0179,32 059130,ATTIVA - M - Palo vento 10 m - POSIZIONI PRECEDENTI: dal 01/01/1921 al 31/12/1990 in 633545E/5099540N/572msmm,633926/5100069,46°02’27.9” N,10°43’51.2” E,Bacino dei fiumi Sarche
+T0175,32 059020,"ATTIVA - MN - Palo vento 10 m - POSIZIONI PRECEDENTI: dal 01/01/1921 al 31/12/1991 in 636480E/5112829N, 765 msmm; dal 04/09/1991 al 31/07/2000 in 635918E, 5113584N, 776 msmm; dal 10/12/2004 posizione attuale e dal 12/01/2010 in sovrapposizione con secondo datalogger ",635701/5112938,46°09’23.4” N,10°45’26.9” E,Bacino dei fiumi Sarche
+T0177,32 058160,ATTIVA - TP - Studio Sarca,626962/5098913,46°01’55.3” N,10°38’26.2” E,Bacino dei fiumi Sarche
+T0030,32 062010,"ATTIVA - TP - POSIZIONI PRECEDENTI: dal 01/01/1927 al 11/10/2005 in 711195E/5114403N, 757 msmm; dal 03/06/2005 posizione attuale",711191/5114301,46°08’58.4” N,11°44’05.4” E,Bacino del fiume Vanoi
+T0421,32 062010,"ATTIVA - MN - Palo vento 10 m, nivometro 5 m",707098.3/5118884,46°11’31.3” N,11°41’02.1” E,Bacino del fiume Vanoi
+T0429,32 045140,ATTIVA - TPN - Palo nivometro 5 m - dati pioggia invernali validi solo come cumulati,715519.3/5120131.6,46°12’02.2” N,11°47’36.5” E,Bacino del fiume Vanoi

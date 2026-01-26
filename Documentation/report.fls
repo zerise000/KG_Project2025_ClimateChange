@@ -223,6 +223,12 @@ INPUT ./images/Knowdive_color_bar.png
 INPUT ./images/./Protegeetypes.jpeg
 INPUT ./images/./Protegeetypes.jpeg
 INPUT ./section/8-dataDefinition.tex
+INPUT ./images/Knowdive_color_bar.png
+INPUT ./images/./Entity_1.jpeg
+INPUT ./images/./Entity_1.jpeg
+INPUT ./images/Knowdive_color_bar.png
+INPUT ./images/./Entity_2.jpeg
+INPUT ./images/./Entity_2.jpeg
 INPUT ./section/9-evaluation.tex
 INPUT ./section/10-metadataDefinition.tex
 INPUT ./section/11-openIssues.tex
