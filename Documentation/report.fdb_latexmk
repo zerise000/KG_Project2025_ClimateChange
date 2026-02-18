@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1771424267.74613 "report.tex" "report.pdf" "report" 1771424270.79169 0
+["lualatex"] 1771425231.78879 "report.tex" "report.pdf" "report" 1771425234.98736 0
   "/home/mattia/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/arial.luc" 1764355544.03593 141416 1e96c6c19a12e41c17df11e2abfa9147 ""
   "/home/mattia/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/arialbd.luc" 1764355544.14793 142004 0f2eebc915c41636cde0f3e299fa012a ""
   "/home/mattia/.texlive2025/texmf-var/luatex-cache/generic/fonts/otl/arialbi.luc" 1764355544.09193 101116 d5ce351cc2c3514cdd540246edcfba68 ""
@@ -190,10 +190,10 @@
   "images/Knowdive_color_bar.png" 1769001604.31531 212038 61c9f9d4e717cc1b2205107628cb8c06 ""
   "images/knowDiveUNITN.png" 1769001604.32331 112478 ea78646f3d9e2fc2d2bdefad11beae7a ""
   "knowdive.cls" 1769001604.32331 4476 0ed5946a151c034a371bfdecb4af08c8 ""
-  "report.aux" 1771424270.43631 7782 63a3fdecc887047e5519136f53612084 "lualatex"
-  "report.out" 1771424270.44031 6509 8d81d830028ae0fd74fd34dccbb9e5ef "lualatex"
-  "report.tex" 1771414863.85414 3049 9bc4411c3f986731fde5087456a1f5e0 ""
-  "report.toc" 1771424270.44031 3961 0550d66646ba8959971636ec51663eb5 "lualatex"
+  "report.aux" 1771425234.63302 7782 63a3fdecc887047e5519136f53612084 "lualatex"
+  "report.out" 1771425234.63302 6509 8d81d830028ae0fd74fd34dccbb9e5ef "lualatex"
+  "report.tex" 1771425224.07697 3123 c67ab801ff0b2705fd892cc529341479 ""
+  "report.toc" 1771425234.63302 3961 0550d66646ba8959971636ec51663eb5 "lualatex"
   "section/0-introduction.tex" 1769001604.33931 1309 2e9243f392a302373cdf4ca26a4e5193 ""
   "section/1-purpose-doi.tex" 1771177598.58964 620 5a172ea8342fecdf63d97c4078b59883 ""
   "section/10-metadataDefinition.tex" 1770890777.02801 4780 d3b77ad678ed2f487e406b0d237f7ffb ""
@@ -202,7 +202,7 @@
   "section/6-languageDefinition.tex" 1770566958.82662 1847 a632e2f184703650e84f3a1a7a014cd2 ""
   "section/7-knowledgeDefinition.tex" 1771420901.00384 3513 d97a482091976132c43bc79d2b61d014 ""
   "section/8-dataDefinition.tex" 1771424205.34799 3352 2d7a1abdc92df2c34e641d7439eb1cdf ""
-  "section/9-evaluation.tex" 1771424098.59547 14355 b319b136fb5a3e41a1827cd283bd7247 ""
+  "section/9-evaluation.tex" 1771424804.94692 15473 4844420ebd3d12406a539b8542cfd82b ""
   (generated)
   "report.aux"
   "report.log"

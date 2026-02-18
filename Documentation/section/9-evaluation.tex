@@ -38,7 +38,7 @@ statistics in order to have a better understanding of the situation:
 \end{itemize}
 
 Both these statistics have been retrieved through following SPARQL queries
-that can be found here
+that can be found \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Evaluation/KG_statistics}{here}
 
 \subsection{Knowledge Layer evaluation}
 
@@ -103,7 +103,7 @@ As we can see the Object Property Coverage results to be low, which means that t
 correlation between the different etypes of the Knowledge Graph. One of the possible causes
 could be the usage of a single informal dataset for the building phase instead on relying on
 multiple sources. The Entity Type coverage also seems to have some gaps inside it, in fact
-we can identify the missing etypes through the following SPARQL query:
+we can identify the missing etypes \href{https://github.com/zerise000/KG_Project2025_ClimateChange/blob/main/Evaluation/knowledgeEvaluation/missingEtypes.txt}{through the following SPARQL query}:
 
 \begin{itemize}
 	\item ClimateChange
@@ -215,11 +215,11 @@ Both these metrices can be generalized to the whole knowledge graph:
 In previous sections we defined Competency Questions (CQs) that describes hypotetical scenario
 that our Knowledge Graph (KG) should be able to cover, which must be then turned into SPARQL queries
 and run on our teleontology in order to check it returns the predicted results. We can model
-the whole situation in the following way: for each CQ we describe the etypes and property
-values it should display, the query run on the KG and the actual results:
+the whole situation in the following way: for each CQ we describe
+values it should display and a description of the actual results:
 \begin{itemize}
 	
-	\item The Competency Question Q1 query can be found here. 
+	\item The Competency Question Q1 query can be found \href{https://github.com/zerise000/KG_Project2025_ClimateChange/blob/main/Evaluation/competencyQuestions/Q1.txt}{here}. 
 	From the theoretical point of view of our model the query should
 	return the temperatures of different metereological stations in
 	the period 2015-2025, and we can see that it actually returns
@@ -227,13 +227,14 @@ values it should display, the query run on the KG and the actual results:
 	only the mean, which means that some metereological stations
 	are excluded
 
-	\item the Competency Question Q2 query can be found here.
+	\item the Competency Question Q2 query can be found \href{https://github.com/zerise000/KG_Project2025_ClimateChange/blob/main/Evaluation/competencyQuestions/Q2.txt}{here}.
 	The Competency Question asks for the distribution of the
 	metereological facilities but since we cannot link directly
 	the coordinates with a specific location we will just print
 	the latitude and the longitude of the facility.
 	
-	\item The Competency Question Q3 query can be found here.
+	\item The Competency Question Q3 query can be found \href{https://github.com/zerise000/KG_Project2025_ClimateChange/blob/main/Evaluation/competencyQuestions/Q3.txt}{here}.
+.
 	The body of the request splits the data in two distinct 
 	periods, the one that goes from 2015 and terminates in
 	the 2019, and the other one that goes from 2020 and terminates
@@ -245,7 +246,8 @@ values it should display, the query run on the KG and the actual results:
 	are provided we consider the metereological stations as standalone
 	locations
 
-	\item The Competency Question Q5 query can be found here.
+	\item The Competency Question Q5 query can be found \href{https://github.com/zerise000/KG_Project2025_ClimateChange/blob/main/Evaluation/competencyQuestions/Q5.txt}{here}.
+.
 	Also in this case we consider the metereological stations
 	as distinct locations, which allows us to perform the query
 	interrogation. The theoretical result should give us the
@@ -253,7 +255,8 @@ values it should display, the query run on the KG and the actual results:
 	about the rainfalls, disposed in descendent order, and we can
 	see that the actual query result actually satisfies the criteria 
 
-	\item The Competency Question Q6 query can be found here.
+	\item The Competency Question Q6 query can be found \href{https://github.com/zerise000/KG_Project2025_ClimateChange/blob/main/Evaluation/competencyQuestions/Q6.txt}{here}.
+.
 	The body of the request associates a number to each month
 	in order to associate them with the season they belong, then
 	it simply retrieves the interested data linked to a specific
@@ -261,7 +264,8 @@ values it should display, the query run on the KG and the actual results:
 	considered decade with the highest solar radiation statistics,
 	and we can see it actually satisfies the criteria
 
-	\item The Competency Question Q8 query can be found here.
+	\item The Competency Question Q8 query can be found \href{https://github.com/zerise000/KG_Project2025_ClimateChange/blob/main/Evaluation/competencyQuestions/Q8.txt}{here}.
+.
 	The expected result should return the humidity trend, 
 	precisely the minimum,maximum and average values, over the
 	summer of the last three years, which means that the query not
@@ -270,7 +274,8 @@ values it should display, the query run on the KG and the actual results:
 	the years not included in the period 2023-2025, extremes included.
 	As we can see the query actually satisfies the required criteria
 
-	\item The Competency Question Q9 query can be found here. 
+	\item The Competency Question Q9 query can be found \href{https://github.com/zerise000/KG_Project2025_ClimateChange/blob/main/Evaluation/competencyQuestions/Q9.txt}{here}.
+. 
 	We ask to the Knowledge Graph the rainfalls trend of the last
 	five years by simply filtering the time when the data
 	have been acquired and considering them only if they have
@@ -280,7 +285,7 @@ values it should display, the query run on the KG and the actual results:
 	maximum, minimum and average rain volumes also in this case, and we
 	can see how the query satisfies the required criteria
 
-	\item The Competency Question Q10 query can be found here.
+	\item The Competency Question Q10 query can be found \href{https://github.com/zerise000/KG_Project2025_ClimateChange/blob/main/Evaluation/competencyQuestions/Q10.txt}{here}..
 	The query checks if the station contains the humidity measurements
 	we are looking for, then it filters the data of the period
 	2016-2025 (extremes included). Theoretically speaking it should

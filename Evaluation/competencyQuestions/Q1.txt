@@ -1,4 +1,4 @@
-# Competency Question Q1: What is the trend of the temperature values in Trentino
+# What is the trend of the temperature values in Trentino
 # during the decade 2015-2025?
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
