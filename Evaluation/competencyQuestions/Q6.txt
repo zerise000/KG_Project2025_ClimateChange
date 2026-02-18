@@ -1,0 +1,53 @@
+# What are the periods of the year where there are more sun radiations? 
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX C07: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC07#>
+PREFIX C12: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC12#>
+PREFIX C15: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC15#>
+PREFIX C25: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC25#>
+PREFIX C27: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC27#>
+PREFIX C30: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC30#>
+PREFIX Q56: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q56413401#>
+
+SELECT ?monthNum ?monthName ?season
+       (AVG(?radValue) AS ?avgRadiation)
+       (MAX(?radValue) AS ?maxRadiation)
+       (MIN(?radValue) AS ?minRadiation)
+WHERE {
+  ?facility    C12:Has_metereological_facility_name  ?stationName .
+  ?facility    C25:Contains                          ?sensor .
+  ?sensor      C27:Measures                          ?measurement .
+  ?measurement a  C07:SolarRadiationMeasurement .
+  ?measurement C15:Has_val                           ?radRaw .
+  ?measurement C30:Measured_at                       ?month .
+  ?month       Q56:Has_month_name                    ?monthDate .
+
+  BIND(xsd:integer(SUBSTR(?monthDate, 13, 2)) AS ?monthNum)
+  BIND(xsd:decimal(REPLACE(?radRaw, "\\s+", "")) AS ?radValue)
+
+  # Human-readable month name
+  BIND(
+    IF(?monthNum =  1, "January",
+    IF(?monthNum =  2, "February",
+    IF(?monthNum =  3, "March",
+    IF(?monthNum =  4, "April",
+    IF(?monthNum =  5, "May",
+    IF(?monthNum =  6, "June",
+    IF(?monthNum =  7, "July",
+    IF(?monthNum =  8, "August",
+    IF(?monthNum =  9, "September",
+    IF(?monthNum = 10, "October",
+    IF(?monthNum = 11, "November",
+                       "December")))))))))))
+  AS ?monthName)
+
+  # Meteorological season assignment
+  BIND(
+    IF(?monthNum = 12 || ?monthNum = 1 || ?monthNum = 2, "Winter",
+    IF(?monthNum = 3  || ?monthNum = 4 || ?monthNum = 5, "Spring",
+    IF(?monthNum = 6  || ?monthNum = 7 || ?monthNum = 8, "Summer",
+                                                         "Autumn")))
+  AS ?season)
+}
+GROUP BY ?monthNum ?monthName ?season
+ORDER BY DESC(?avgRadiation)

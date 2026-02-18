@@ -1,0 +1,12 @@
+SELECT DISTINCT ?objectProperty
+WHERE {
+  ?s ?objectProperty ?o .
+  
+  # Filter to ensure the target is a Resource (URI or Blank Node)
+  FILTER(isIRI(?o) || isBlank(?o))
+  
+  # Filter out internal RDF/OWL structural properties
+  FILTER (?objectProperty != <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>)
+  FILTER (!STRSTARTS(STR(?objectProperty), "http://www.w3.org/2002/07/owl#"))
+}
+ORDER BY ?objectProperty

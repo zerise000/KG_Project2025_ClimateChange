@@ -1,0 +1,17 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT 
+  (COUNT(DISTINCT ?objProp) AS ?Count_Object_Properties)
+  (COUNT(DISTINCT ?dataProp) AS ?Count_Data_Properties)
+WHERE {
+  ?s ?p ?o .
+  
+  # Logic to separate properties into two temporary variables
+  BIND(IF(!isLiteral(?o), ?p, ?nothing) AS ?objProp)
+  BIND(IF(isLiteral(?o), ?p, ?nothing) AS ?dataProp)
+
+  # Filter out internal system properties
+  FILTER (?p != rdf:type)
+  FILTER (!STRSTARTS(STR(?p), "http://www.w3.org/2002/07/owl#"))
+}

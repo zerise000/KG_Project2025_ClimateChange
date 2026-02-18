@@ -1,1 +1,291 @@
 \section{Evaluation}
+At the conclusion of the iTelos procedure we obtained a
+Knowledge Graph (KG) generated from external data of the real world;
+however it is important now to proceed by understanding
+if the result satisfies our needs and expected performances,
+for this it is necessary to make an evaluation of the KG,
+and in order to do it we have to rely on a software that
+interrogates our KG: such tool
+is represented by \href{https://www.ontotext.com/products/graphdb/}{GraphDB}, a program that allows
+to load the final KG and execute SPARQL queries on it in order
+to retrieve the necessary informations. In this final
+section we will cover three different aspects of the 
+evaulation process:
+\begin{itemize}
+	\item the general statistics of our KG
+	\item the knowledge evaluation phase,
+		in particular the different coverage types
+	\item the data evaluation phase, foucsing
+		mainly on the connectivity of the KG
+	\item the conversion of the various
+		Competency Questions in SPARQL queries,
+		in order to check if our KG is able to
+		satisfy them
+\end{itemize}
+
+\subsection{KG statistics}
+
+As first point in the evaluation it is useful to report some
+statistics in order to have a better understanding of the situation:
+
+\begin{itemize}
+	\item In total there are 17 etypes, and among them we count: \textit{MeteorologicalMeasurement},
+		\textit{TempMeasurement},\textit{Month},\textit{WindMeasurement},
+		\textit{RainMeasurement},\textit{HumidityMeasurement},\textit{PressureMeasurement},
+		\textit{SolarRadiationMeasurement},\textit{MeteorologicalFacility},\textit{Valley},
+		\textit{Coordinates},\textit{Sensor}
+	\item 12 data properties and 10 object properties		
+\end{itemize}
+
+Both these statistics have been retrieved through following SPARQL queries
+that can be found here
+
+\subsection{Knowledge Layer evaluation}
+
+An important aspect of Knowledge Graphs is how well they are able
+to cover the portion of knowledge we want to incapsulate inside
+them, specifically this concept can be illustrated with the Competency
+Questions (CQs): if a particular Knowledge Graph has been designed well
+then it will be able to cover as many CQs as possible. We formalize
+this concept by saying that we want to compute the \textbf{coverage}
+of our teleontology $T$ at Knowledge Level. Referencing the previous
+sections we can retrieve:
+
+\begin{itemize}
+	 
+	\item  the \textbf{Entity Types Coverage}, which measures the ratio
+	of how many etypes are present in our teleontology: 
+		$$Cov_E(CQ_E) = \frac{|CQ_E \cap T_E|}{|CQ_E|} = \frac{11}{18} = 61.1\%$$
+	where $T_e$ are the etypes in our generated teleontology, while $CQ_e$
+	are the etypes related to the Competency Questions $CQs$.
+
+	\item last, the \textbf{Property Coverage} it measures
+	how many attributes in the Knowledge Layer are present in the
+	Teleology. The formula is:
+		$$Cov_{P}(CQ_{P}) = \frac{|CQ_{P} \cap T_{P}|}{|CQ_{P}|} = \frac{12}{29} = 41.3\%$$
+	where $T_{P}$ are the properties in our generated teleontology, while $CQ_{P}$
+	are the properties associated to the Comptetency Questions $CQs$.
+\end{itemize}
+
+It is also possible to define the coverage by analyzing the teleontology
+$T$ generated in the previous sections, and comparing it with various 
+knowledge elements called Knowledge Atoms (KATOMs) taken from
+the reference ontology generated in the knowledge phase:
+
+\begin{itemize}
+	\item when the considered KATOM is an etype we talk about
+	\textbf{Entity Type Coverage}, which measures the ratio
+	of how many etypes are present in our teleontology: 
+		$$Cov_e(KATOM_e) = \frac{|KATOM_e \cap T_e|}{|KATOM_e|} = \frac{12}{18} = 66.6\%$$
+	where $T_e$ are the etypes in our generated teleontology, while $KATOM_e$
+	are the etypes defined at knowledge level.
+
+	\item similarly, we define the \textbf{Object Property Coverage} 
+	when the considered KATOM is about relationships, and it measures
+	how many relationships in the Knowledge Layer are present in the
+	Teleology. In this case the formula becomes:
+		$$Cov_{OP}(KATOM_{OP}) = \frac{|KATOM_{OP} \cap T_{OP}|}{|KATOM_{OP}|} = \frac{5}{12} = 41.6\%$$
+	where $T_{OP}$ are the relationships in our generated teleontology, while $KATOM_{OP}$
+	are the relationships defined at knowledge level.
+
+	\item last, the \textbf{Data Property Coverage} treats 
+	KATOMs as attributes, and it measures
+	how many attributes in the Knowledge Layer are present in the
+	Teleology. The formula is:
+		$$Cov_{DP}(KATOM_{DP}) = \frac{|KATOM_{DP} \cap T_{DP}|}{|KATOM_{DP}|} = \frac{11}{13} = 84.61\%$$
+	where $T_{DP}$ are the relationships in our generated teleontology, while $KATOM_{DP}$
+	are the relationships defined at knowledge level.
+\end{itemize}
+
+All the SPARQL queries used to obtain the various
+Teleontology vs KATOM coverages can be found here.
+As we can see the Object Property Coverage results to be low, which means that there is not much
+correlation between the different etypes of the Knowledge Graph. One of the possible causes
+could be the usage of a single informal dataset for the building phase instead on relying on
+multiple sources. The Entity Type coverage also seems to have some gaps inside it, in fact
+we can identify the missing etypes through the following SPARQL query:
+
+\begin{itemize}
+	\item ClimateChange
+	\item Trentino
+	\item TimeInterval
+	\item ClimateChangeIndicator
+	\item Trend
+\end{itemize}
+
+\subsection{Data Layer evaluation}
+
+the knowledge layer evaluation gives us only a generic view on the situation:
+in fact it tells us how much knowledge is covered by the defined KG, however
+it does not provide any useful informations about the structure of the graph
+itself, like the connectivity between the nodes. The evaluation of the data
+layer aims to fill this gap by representing the 
+Entity and Property connectivity through a \textbf{Connectivity Matrix}.
+\begin{table}
+	\centering
+	\resizebox{\textwidth}{!}{%
+	\begin{tabular}{| l | l | l | l | l | l | l | l | l | l | l | l | l |}
+		\hline
+		Etypes & \textbf{MeteorologicalMeasurement} & \textbf{TempMeasurement} & \textbf{Month} & \textbf{WindMeasurement} &
+		\textbf{RainMeasurement} & \textbf{HumidityMeasurement} & \textbf{PressureMeasurement} & \textbf{SolarRadiationMeasurement} & 
+		\textbf{MeteorologicalFacility} & \textbf{Valley} & \textbf{Coordinates} & \textbf{Sensor} \\
+		\hline
+		\textbf{MeteorologicalMeasurement} & 36101 & 0 & 14541 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+		\hline
+		\textbf{TempMeasurement} & 0 & 17610 & 6106 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		\hline
+		\textbf{Month} & 0 & 0 & 2806 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		\hline
+		\textbf{WindMeasurement} & 0 & 0 & 2572 & 7240 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		\hline
+		\textbf{RainMeasurement} & 0 & 0 & 2447 & 0 & 4776 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		\hline
+		\textbf{HumidityMeasurement} & 0 & 0 & 1183 & 0 & 0 & 2247 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		\hline
+		\textbf{PressureMeasurement} & 0 & 0 & 1141 & 0 & 0 & 0 & 2163 & 0 & 0 & 0 & 0 & 0 \\
+		\hline
+		\textbf{SolarRadiationMeasurement} & 0 & 0 & 1092 & 0 & 0 & 0 & 0 & 2065 & 0 & 0 & 0 & 0 \\
+		\hline
+		\textbf{MeterelogicalFacility} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 36101 & 0 & 24 & 23 \\
+		\hline
+		\textbf{Valley} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 24 & 0 & 0 \\
+		\hline
+		\textbf{Coordinates} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 24 & 72 & 0 \\
+		\hline
+		\textbf{Sensor} & 14541 & 6106 & 0 & 2572 & 2447 & 1183 & 1141 & 1092  & 0 & 0 & 0 & 0 \\
+		\hline
+		\end{tabular}%
+		}
+\end{table}
+In particular we define two metrics:
+
+\begin{itemize}
+	\item the \textbf{Entity Connectivity} for a specific EType X, which
+	represents how much entities are connected to each other: $EC(X) = \frac{\sum^N_{Y=1}{(X,Y)}}{OP(X)}$
+	\item the \textbf{Property Connectivity} for a specific EType X, which tells us
+	how much the entities are connected to their properties: $PC(X) = \frac{(X,X)}{DP(X)}$
+\end{itemize}
+
+Where $(X,Y)$ is a cell in the connectivity matrix, $OP(X)$ is the number of object properties
+for the EType $X$, and $DP(X)$ is the number of data properties in the EType $X$. By calculating
+the number of object properties and data properties for each etype we can easily retrieve 
+the Entity Connectivitie:
+\begin{itemize}
+	\item \textit{MeteorologicalMeasurement}: $\frac{36101+14541}{1} = 50642$
+	\item \textit{TempMeasurement}: $\frac{17610+6106}{1} = 23716$
+	\item \textit{Month}: $0$
+	\item \textit{WindMeasurement}: $\frac{2572+7240}{1} = 9812$
+	\item \textit{RainMeasurement}: $\frac{4776+2447}{1} = 7223$
+	\item \textit{HumidityMeasurement}: $\frac{2247+1183}{1} = 3430$
+	\item \textit{PressureMeasurement}: $\frac{1141+2163}{1} = 3304$
+	\item \textit{SolarRadiationMeasurement}: $\frac{2065+1092}{1} = 3157$
+	\item \textit{MeteorologicalFacility}: $\frac{36101+24+23}{2} = 18074$
+	\item \textit{Valley}: $0$
+	\item \textit{Coordinates}: $\frac{72+24}{1} = 96$
+	\item \textit{Sensor}: $\frac{14541+6106+2572+2447+1183+1141+1092}{1} = 29082$
+\end{itemize}
+Also we can find the Property Connectivity of each etype:
+\begin{itemize}
+	\item \textit{MeteorologicalMeasurement}: $\frac{36101}{4} = 9025$
+	\item \textit{TempMeasurement}: $\frac{17610}{4} = 4402$
+	\item \textit{Month}: $\frac{2806}{1} = 2806$
+	\item \textit{WindMeasurement}: $\frac{7240}{3} = 2413$
+	\item \textit{RainMeasurement}: $\frac{4776}{2} = 2388$
+	\item \textit{HumidityMeasurement}: $\frac{2247}{2} = 1123$
+	\item \textit{PressureMeasurement}: $\frac{2163}{2} = 1081$
+	\item \textit{SolarRadiationMeasurement}: $\frac{2065}{2} = 1032$
+	\item \textit{MeteorologicalFacility}: $\frac{36101}{4} = 9025$
+	\item \textit{Valley}: $\frac{24}{1} = 24$
+	\item \textit{Coordinates}: $\frac{72}{3} = 24$
+	\item \textit{Sensor}: $0$
+\end{itemize}
+We can notice how the 
+Property Connectivity of Sensor is set to 
+zero since there is no instance of this etype 
+in our Knowledge Graph.
+Both these metrices can be generalized to the whole knowledge graph:
+
+\begin{itemize}
+	\item the \textbf{Entity Connectivity}: $EC(X) = \sum^{N}_{X=1}{EC(X)} = 148536$
+	\item the \textbf{Property Connectivity}: $PC(X) = \sum^{N}_{X=1}{PC(X)} = 33343$
+\end{itemize}
+
+\subsection{Queries}
+
+In previous sections we defined Competency Questions (CQs) that describes hypotetical scenario
+that our Knowledge Graph (KG) should be able to cover, which must be then turned into SPARQL queries
+and run on our teleontology in order to check it returns the predicted results. We can model
+the whole situation in the following way: for each CQ we describe the etypes and property
+values it should display, the query run on the KG and the actual results:
+\begin{itemize}
+	
+	\item The Competency Question Q1 query can be found here. 
+	From the theoretical point of view of our model the query should
+	return the temperatures of different metereological stations in
+	the period 2015-2025, and we can see that it actually returns
+	data about this temporal window. Notice how the query considers
+	only the mean, which means that some metereological stations
+	are excluded
+
+	\item the Competency Question Q2 query can be found here.
+	The Competency Question asks for the distribution of the
+	metereological facilities but since we cannot link directly
+	the coordinates with a specific location we will just print
+	the latitude and the longitude of the facility.
+	
+	\item The Competency Question Q3 query can be found here.
+	The body of the request splits the data in two distinct 
+	periods, the one that goes from 2015 and terminates in
+	the 2019, and the other one that goes from 2020 and terminates
+	in 2025. After doing this it calculates the average temperature
+	over these two periods separately and then it retrieves the
+	temperature increase happened between the two eras. The expected 
+	result should display the increase temperature over
+	different areas in Trentino region, however since no areas
+	are provided we consider the metereological stations as standalone
+	locations
+
+	\item The Competency Question Q5 query can be found here.
+	Also in this case we consider the metereological stations
+	as distinct locations, which allows us to perform the query
+	interrogation. The theoretical result should give us the
+	different metereological stations, togheter with the statistics
+	about the rainfalls, disposed in descendent order, and we can
+	see that the actual query result actually satisfies the criteria 
+
+	\item The Competency Question Q6 query can be found here.
+	The body of the request associates a number to each month
+	in order to associate them with the season they belong, then
+	it simply retrieves the interested data linked to a specific
+	period. The expected result should return the months and the seasons over the
+	considered decade with the highest solar radiation statistics,
+	and we can see it actually satisfies the criteria
+
+	\item The Competency Question Q8 query can be found here.
+	The expected result should return the humidity trend, 
+	precisely the minimum,maximum and average values, over the
+	summer of the last three years, which means that the query not
+	only must consider only \textit{monthNum} equal to six, seven
+	and eight (respectively June,July and August) but also it must filter
+	the years not included in the period 2023-2025, extremes included.
+	As we can see the query actually satisfies the required criteria
+
+	\item The Competency Question Q9 query can be found here. 
+	We ask to the Knowledge Graph the rainfalls trend of the last
+	five years by simply filtering the time when the data
+	have been acquired and considering them only if they have
+	relevations about the rain volumes, which means that the latter
+	statistics in these cases must be greater than zero. The expected
+	result should return the rainfall trend with the complete statistics,
+	maximum, minimum and average rain volumes also in this case, and we
+	can see how the query satisfies the required criteria
+
+	\item The Competency Question Q10 query can be found here.
+	The query checks if the station contains the humidity measurements
+	we are looking for, then it filters the data of the period
+	2016-2025 (extremes included). Theoretically speaking it should
+	return the humidity trends considering maximum, minimum and
+	average values, togheter with the station that made the measurements
+	and the year when the relevations have been produced, and we can see
+	that the actual reult perfectly match the expectations
+\end{itemize}

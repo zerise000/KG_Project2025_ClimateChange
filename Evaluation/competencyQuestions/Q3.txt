@@ -1,0 +1,56 @@
+# Which areas in Trentino have seen the highest increase in temperature over time? 
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX C02: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC02#>
+PREFIX C12: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC12#>
+PREFIX C15: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC15#>
+PREFIX C17: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC17#>
+PREFIX C25: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC25#>
+PREFIX C27: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC27#>
+PREFIX C30: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC30#>
+PREFIX Q56: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q56413401#>
+
+SELECT ?stationName
+       (AVG(?earlyTemp) AS ?avgEarlyTemp)
+       (AVG(?lateTemp)  AS ?avgLateTemp)
+       (AVG(?lateTemp) - AVG(?earlyTemp) AS ?tempIncrease)
+WHERE {
+  {
+    ?facility    C12:Has_metereological_facility_name  ?stationName .
+    ?facility    C25:Contains                          ?sensor .
+    ?sensor      C27:Measures                          ?measurement .
+    ?measurement a  C02:TempMeasurement .
+    ?measurement C17:Has_statistic_type                "mean" .
+    ?measurement C15:Has_val                           ?earlyRaw .
+    ?measurement C30:Measured_at                       ?month .
+    ?month       Q56:Has_month_name                    ?monthDate .
+
+    BIND(xsd:integer(SUBSTR(?monthDate, 16, 4)) AS ?earlyYear)
+    FILTER(?earlyYear >= 2015 && ?earlyYear <= 2019)
+    BIND(xsd:decimal(REPLACE(?earlyRaw, "\\s+", "")) AS ?earlyTemp)
+
+    # Bind dummy late value so the variable is defined in both branches
+    BIND(0.0 AS ?lateTemp)
+  }
+  UNION
+  {
+    # Late period: 2023-2025
+    ?facility    C12:Has_metereological_facility_name  ?stationName .
+    ?facility    C25:Contains                          ?sensor .
+    ?sensor      C27:Measures                          ?measurement .
+    ?measurement a  C02:TempMeasurement .
+    ?measurement C17:Has_statistic_type                "mean" .
+    ?measurement C15:Has_val                           ?lateRaw .
+    ?measurement C30:Measured_at                       ?month .
+    ?month       Q56:Has_month_name                    ?monthDate .
+
+    BIND(xsd:integer(SUBSTR(?monthDate, 16, 4)) AS ?lateYear)
+    FILTER(?lateYear >= 2020 && ?lateYear <= 2025)
+    BIND(xsd:decimal(REPLACE(?lateRaw, "\\s+", "")) AS ?lateTemp)
+
+    # Bind dummy early value
+    BIND(0.0 AS ?earlyTemp)
+  }
+}
+GROUP BY ?stationName
+ORDER BY DESC(?tempIncrease)

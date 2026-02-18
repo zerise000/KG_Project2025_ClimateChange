@@ -1,0 +1,37 @@
+# What is the trend of humidity in the summer of the last three years? 
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX C04: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC04#>
+PREFIX C12: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC12#>
+PREFIX C15: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC15#>
+PREFIX C25: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC25#>
+PREFIX C27: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC27#>
+PREFIX C30: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC30#>
+PREFIX Q56: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q56413401#>
+
+SELECT ?stationName ?year ?monthNum ?monthDate
+       (AVG(?humidityValue) AS ?avgHumidity)
+       (MIN(?humidityValue) AS ?minHumidity)
+       (MAX(?humidityValue) AS ?maxHumidity)
+WHERE {
+  ?facility    C12:Has_metereological_facility_name  ?stationName .
+  ?facility    C25:Contains                          ?sensor .
+  ?sensor      C27:Measures                          ?measurement .
+  ?measurement a  C04:HumidityMeasurement .
+  ?measurement C15:Has_val                           ?humidityRaw .
+  ?measurement C30:Measured_at                       ?month .
+  ?month       Q56:Has_month_name                    ?monthDate .
+
+  BIND(xsd:integer(SUBSTR(?monthDate, 13, 2)) AS ?monthNum)
+  BIND(xsd:integer(SUBSTR(?monthDate, 16, 4)) AS ?year)
+
+  # Summer months: June (6), July (7), August (8)
+  FILTER(?monthNum = 6 || ?monthNum = 7 || ?monthNum = 8)
+
+  # Last three summers: 2023, 2024, 2025
+  FILTER(?year >= 2023 && ?year <= 2025)
+
+  BIND(xsd:decimal(REPLACE(?humidityRaw, "\\s+", "")) AS ?humidityValue)
+}
+GROUP BY ?stationName ?year ?monthNum ?monthDate
+ORDER BY ?stationName ?year ?monthNum

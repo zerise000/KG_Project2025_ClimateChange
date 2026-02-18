@@ -1,10 +1,6 @@
 \section{Knowledge Definition}
-The knowledge definition phase of the \textit{iTelos} methodology consists on the construction of the knowledge graph
-by formalizing and aligning the information gathered so far and create a unified knowledge representation via a teleontology.
-
-We want to go step by step, starting from the output of the previous layer, we want to build a extended entity relation model,
-to explicit the entity types, the object properties and the data properties as well as the hierarchy of the entity typs.
-we modified the ER model taking advantage from the developed domain language
+The knowledge definition phase of the \textit{iTelos} methodology consists on the construction of the knowledge graph by formalizing and aligning the information gathered so far and create a unified knowledge representation via a teleteleology. Starting from the output of the previous layer we want to build an extended entity relation model (EER), which points to reflect a more clear vision of the
+ classic ER previously defined by implementing the concept of generalization: we define specific entities which represents particular istances of a more generalized superclass; this process is done by introducing the \textbf{'is-a' relation}, which explicit the hierarchy of the entity types. The ER model must be modified by taking advantage from the developed domain language, adding possible class inheritances, which results in the figure \ref{EER}, that can also be found \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Phase%203%20-%20Knowledge%20Definition}{here}
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=\textwidth]{"./EER.png"}
@@ -13,13 +9,10 @@ we modified the ER model taking advantage from the developed domain language
 \end{center}
 \end{figure}
 \newpage
-full diagram in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Phase%203%20-%20Knowledge%20Definition}{EER.drawio}
 
-From this we edit the ontology by using Protègè, a specific tool that through its UI allowed us to define entity types, object properties
-and data properties, to build a solid ontology, and to link our work to a well established set of concepts.
-The sesult of this work can be found in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Phase%203%20-%20Knowledge%20Definition}{UNITN2026KGMM\_Knowledge\_definition.ofn}.
-
-
+Although the EER diagram is based on the previous Language Phase is important to notice that it still lacks a relevant piece that without its presence does not allow do encapsulate any kind of information: conceptualization. by using Protègè, a specific tool that through its UI allowed us to define entity types, object properties
+and data properties, to build a solid teleology, and to link our work to a well established set of concepts.
+The result of this work can be found in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Phase%203%20-%20Knowledge%20Definition}{UNITN2026KGMM\_Knowledge\_definition.ofn}.
 in Protègè we started by creating all the entity types, ang assigning to each a specific concept ID, as seen in the language
 definition phase some concept was tailored made for this project, like TempMeasurement, while some other are referred to
 wikidata concepts, Wikidata was adopted as reference knowledge resource for concept alignment, due to its rich coverage of
@@ -33,13 +26,14 @@ is referred to, and the range is eather Integer, Float or String.
 
 
 Lastly for the object properties again we modelled all the ID, and the domain and range records, where the domain is the
-subject of the relationship and the range is the object.
+subject of the relationship and the range is the object. In figure \ref{Protegeetypes} we can see a piece of the representation, showing the Etypes hierarchy
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics{"./Protegeetypes.jpeg"}
+	\includegraphics[scale=0.7]{"./Protegeetypes.jpeg"}
 \caption{Protegeetypes}
 \label{Protegeetypes}
 \end{center}
 \end{figure}
-Here we can see a piece of the representation, showing the Etypes hierarchy
+
+We can notice how the structure of the teleontology is pretty much the same of the original ER schema, however thanks to the definition of the EER diagram and the introduction of is-a relationships it results to have a much more organized structure thanks to the implemented hierarchy. 

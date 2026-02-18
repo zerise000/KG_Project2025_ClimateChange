@@ -1,0 +1,18 @@
+# compare etypes in the reference ontology and in the teleontology,
+then show the missing ones
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?missingEType
+WHERE {
+  # Get all classes from the Reference Ontology
+  ?missingEType rdf:type owl:Class .
+  FILTER (STRSTARTS(STR(?missingEType), "http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/"))
+
+  # Filter out those that have instances in the data
+  FILTER NOT EXISTS {
+    ?instance rdf:type ?missingEType .
+  }
+}
+ORDER BY ?missingEType

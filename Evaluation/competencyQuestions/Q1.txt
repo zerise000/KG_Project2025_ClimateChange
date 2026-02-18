@@ -1,0 +1,35 @@
+# Competency Question Q1: What is the trend of the temperature values in Trentino
+# during the decade 2015-2025?
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX C02: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC02#>
+PREFIX C12: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC12#>
+PREFIX C15: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC15#>
+PREFIX C17: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC17#>
+PREFIX C25: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC25#>
+PREFIX C27: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC27#>
+PREFIX C30: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC30#>
+PREFIX Q56: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q56413401#>
+
+SELECT ?stationName ?monthDate ?statType ?tempValue
+WHERE {
+  ?facility    C12:Has_metereological_facility_name  ?stationName .
+  ?facility    C25:Contains                          ?sensor .
+  ?sensor      C27:Measures                          ?measurement .
+  ?measurement a C02:TempMeasurement .
+  ?measurement C17:Has_statistic_type                ?statType .
+  ?measurement C15:Has_val                           ?tempValueRaw .
+  ?measurement C30:Measured_at                       ?month .
+  ?month       Q56:Has_month_name                    ?monthDate .
+
+  # Extract year from date string "00:00:00 DD/MM/YYYY" — year starts at index 16
+  BIND(xsd:integer(SUBSTR(?monthDate, 16, 4)) AS ?year)
+  FILTER(?year >= 2015 && ?year <= 2025)
+
+  # Only mean values to observe the trend
+  FILTER(?statType = "mean")
+
+  # Strip leading spaces and cast to decimal
+  BIND(xsd:decimal(REPLACE(?tempValueRaw, "\\s+", "", "i")) AS ?tempValue)
+}
+ORDER BY ?stationName ?year SUBSTR(?monthDate, 13, 2)

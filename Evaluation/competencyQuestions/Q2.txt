@@ -1,0 +1,18 @@
+# How the metereological facilities are distributed on the territory 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ont: <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/>
+
+SELECT ?facilityName ?latitude ?longitude
+WHERE {
+  # 1. Identify the facility and its name
+  ?facility <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC12#Has_metereological_facility_name> ?facilityName .
+
+  # 2. Link the facility to its coordinates
+  # In your TTL, the facility is linked to coordinates via 'located_in'
+  ?facility <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/UNITN2026KGMMC24#located_in> ?coords .
+
+  # 3. Retrieve the specific coordinate values
+  ?coords <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q34027#Has_latitude> ?latitude ;
+          <http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/Q36477#Has_longitude> ?longitude .
+}

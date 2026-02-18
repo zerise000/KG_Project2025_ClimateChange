@@ -1,0 +1,12 @@
+SELECT DISTINCT ?dataProperty
+WHERE {
+  ?s ?dataProperty ?o .
+  
+  # Filter to ensure the object is a Literal value
+  FILTER(isLiteral(?o))
+  
+  # Optional: Filter out standard RDF/XML/OWL system properties
+  FILTER (!STRSTARTS(STR(?dataProperty), "http://www.w3.org/1999/02/22-rdf-syntax-ns#"))
+  FILTER (!STRSTARTS(STR(?dataProperty), "http://www.w3.org/2000/01/rdf-schema#"))
+}
+ORDER BY ?dataProperty

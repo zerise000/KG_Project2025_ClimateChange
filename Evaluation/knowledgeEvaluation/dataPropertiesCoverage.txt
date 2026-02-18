@@ -1,0 +1,27 @@
+# calculate the data property coverage
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT 
+  (COUNT(DISTINCT ?teleologyProp) AS ?Total_Teleology_DataProps)
+  (COUNT(DISTINCT ?atomProp) AS ?Instantiated_AToM_DataProps)
+  # iTelos Coverage Formula
+  ((COUNT(DISTINCT ?atomProp) * 100.0 / COUNT(DISTINCT ?teleologyProp)) AS ?DataProp_Coverage_Percent)
+WHERE {
+  # 1. SCAN TELEOLOGY (The Reference Ontology)
+  # Look for Datatype Properties defined in your project namespace
+  ?teleologyProp rdf:type owl:DatatypeProperty .
+  
+  FILTER (STRSTARTS(STR(?teleologyProp), "http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/"))
+
+  # 2. SCAN KNOWLEDGE ATOM (The Data Instances)
+  # Check if this property is used at least once to store a literal value
+  OPTIONAL {
+    GRAPH ?g {
+      ?s ?teleologyProp ?o .
+      FILTER(isLiteral(?o))
+    }
+    BIND(?teleologyProp AS ?atomProp)
+  }
+}

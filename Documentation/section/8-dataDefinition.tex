@@ -1,12 +1,9 @@
 \section{Entity Definition}
-This phase describe the entity definition phase
 
-\subsection{Objectives}
-This is the final spet in \textit{iTelos} metodology, merging the knowledgeand data layers into a unified Knowledge Graph,
-The input are: data resources, and the teleontology developed in previous phase.
+With the results obtained from previous chapters we have created a teleontology that represent an abstract conceptualization of the real world we want to interpet; however it is necessary now to take care of the \textbf{meaning hetereogenity}: we need to find a way to distinguish two entities based not only on the abstract conecpt represented by the teleontology but also we need to consider the possible diversity of the datasets involved. This is the final spet in \textit{iTelos} metodology, merging the knowledge and data layers into a unified Knowledge Graph,
+the input are the data resources and the teleontology developed in previous phase.
 To do so, we have to teke care of the heterogeneity in the data layer, in this layer heterogeneity is shown in 3 different
 ways
-
 \begin{itemize}
     \item \textbf{Entity Matching}: resolves discrepancies in the representation of real-world entities across
 different datasets, considering both schema and data-level heterogeneity.
@@ -32,20 +29,26 @@ their data values.
 
 We did so by \href{https://usc-isi-i2.github.io/karma/}{Karma} tool. The output of this phas is in \href{https://github.com/zerise000/KG_Project2025_ClimateChange/tree/main/Phase%204%20-%20Entity%20Definition}{Entity Definition}
 of our repository, in the following images we can see a graphical representation
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=\textwidth]{"./Entity_1.jpeg"}
-\caption{Visualization of the matching of the measurment to the teloeontology}
-\label{Entity_1.jpeg}
-\end{center}
-\end{figure}
 \newpage
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=\textwidth,angle=90]{"./Entity_1.jpeg"}
+		\caption{Visualization of the matching of the measurment to the teloeontology}
+		\label{Entity_1.jpeg}
+	\end{center}
+\end{figure}
 
+\newpage
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[width=\textwidth]{"./Entity_2.jpeg"}
-\caption{Visualization of the matching of the weather station to the teloeontology}
-\label{Entity_2.jpeg}
-\end{center}
+	\begin{center}
+		\includegraphics[width=\textwidth,scale=0.7]{"./Entity_2.jpeg"}
+		\caption{Visualization of the matching of the weather station to the teloeontology}
+		\label{Entity_2.jpeg}
+	\end{center}
 \end{figure}
 \newpage
+The output of this phase is a sequence of \textit{ttl} files, one for each etype, 
+containing all the data retrieved during the \textit{Information Gathering} phase and the \textit{Knowledge phase} that
+described the relevations made by the facilities and their geographical coordinates. These
+files can be fully reused in order to obtain informations through dedicated programs that will run SPARQL queries on them,
+as described in the next chapter

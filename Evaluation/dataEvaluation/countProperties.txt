@@ -1,0 +1,30 @@
+# count both the number of object and data properties for each etype
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?EType 
+       (COUNT(DISTINCT ?dataProp) AS ?Data_Property_Count)
+       (COUNT(DISTINCT ?objProp) AS ?Object_Property_Count)
+WHERE {
+  GRAPH ?g {
+    # 1. Identify the Entity Type
+    ?instance rdf:type ?EType .
+    
+    # 2. Identify the properties attached to the instances
+    ?instance ?p ?value .
+    
+    # 3. Use BIND and IF to separate property types
+    BIND(IF(isLiteral(?value), ?p, ?nothing) AS ?dataProp)
+    BIND(IF(isIRI(?value) || isBlank(?value), ?p, ?nothing) AS ?objProp)
+  }
+
+  # Filter for your specific project namespace
+  FILTER (STRSTARTS(STR(?EType), "http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/"))
+  
+  # Exclude system-level properties (like rdf:type) and generic classes
+  FILTER (?p != rdf:type)
+  FILTER (?EType != owl:Thing)
+}
+GROUP BY ?EType
+ORDER BY DESC(?Data_Property_Count)

@@ -1,0 +1,28 @@
+# calculate the entity type coverage
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT 
+  (COUNT(DISTINCT ?teleologyClass) AS ?Total_Teleology_ETypes)
+  (COUNT(DISTINCT ?atomClass) AS ?Instantiated_AToM_ETypes)
+  # iTelos Coverage Formula
+  ((COUNT(DISTINCT ?atomClass) * 100.0 / COUNT(DISTINCT ?teleologyClass)) AS ?ET_Coverage_Percent)
+WHERE {
+  # 1. SCAN TELEOLOGY (The Reference Ontology)
+  # This targets the classes defined in your UNITN2026KGMM file
+  ?teleologyClass rdf:type owl:Class .
+  
+  # Filter to focus only on your domain (excluding imported owl:Thing etc.)
+  FILTER (STRSTARTS(STR(?teleologyClass), "http://www.semanticweb.org/mattia/ontologies/2026/0/untitled-ontology-5/"))
+
+  # 2. SCAN KNOWLEDGE ATOM (The Data Instances)
+  # Check if at least one instance of this class exists in any graph
+  OPTIONAL {
+    GRAPH ?g {
+      ?instance rdf:type ?teleologyClass .
+    }
+    BIND(?teleologyClass AS ?atomClass)
+  }
+}

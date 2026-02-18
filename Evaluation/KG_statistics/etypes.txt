@@ -1,0 +1,13 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT (COUNT(DISTINCT ?etype) AS ?Total_ETypes)
+WHERE {
+  # Find all unique classes assigned to instances
+  ?instance rdf:type ?etype .
+  
+  # Filter out the generic owl:Thing 
+  # and other built-in system types to get the actual domain entities
+  FILTER (?etype != owl:Thing)
+  FILTER (!STRSTARTS(STR(?etype), "http://www.w3.org/1999/02/22-rdf-syntax-ns#"))
+}

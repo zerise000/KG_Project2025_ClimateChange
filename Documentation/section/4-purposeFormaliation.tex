@@ -77,7 +77,7 @@ of Competency Questions(CQ). Some of them could be formalized in the following t
    \end{tabular}
    \captionof{table}{Competency Questions}
 \end{center}
-\subsection{PurposeFormalization}
+\subsection{Purpose Formalization}
 
 now from the scenarios, the personas, and the competency questions we extract a list of useful concepts,
 During the concept identification phase, we focused on concepts that are directly required to answer the defined
@@ -110,7 +110,7 @@ the concept of \textbf{Sensor}, so the \textbf{Meteorological Facility} contains
 We modeled the concept of \textbf{Trend}.
 \textbf{Trend} is a \textbf{Climate change indicator}, which is pert of \textbf{Climate change}.\\
 
-Some concepts refer to concepts already modeled in wikidata, therefore for this concept we linked the ID to the wikidata one,--------------------------------------------------------------------------------------------------------
+Some concepts refer to concepts already modeled in wikidata, therefore for this concept we linked the ID to the wikidata one,
 for their nature the concept with contextual focus are not very reusable so cannot be linked to preexisting concepts
 
 \subsection{ER Diagram}
@@ -177,7 +177,7 @@ Coordinates & \textit{latitude},\textit{longitude} \\
 Weather & \textit{temperature},\textit{humidity},\textit{date},
 \textit{wind speed},\textit{is\_sunny}  \\
 \hline
-MetheorogicalFacility & \textit{\textbf{facility\_ID}},\textit{name},\textit{gps\_coordinates},
+MeteorogicalFacility & \textit{\textbf{facility\_ID}},\textit{name},\textit{gps\_coordinates},
 \textit{inauguration\_date},\textit{still\_active} \\
 \hline
 ClimateEvent & \textit{\textbf{event\_ID}},\textit{location},\textit{weather\_status},\textit{event\_date} \\
@@ -206,41 +206,27 @@ necessary match the time memorized in the Weather entity (maybe because the weat
 every 24 hours, and the climate event happen in the meantime).
 With the definition of the entities (altough informal) done it is possible now to define the ER diagram
 that declares the relationship between the subjects involved, as in figure \ref{ER}. It is interesting
-to notice how there is a one-to-one relationship between MetheorologicalFacility entity and Coordinates
+to notice how there is a one-to-one relationship between MeteorologicalFacility entity and Coordinates
 while it could be sufficient to identify a facility through the location. The main reason why such decision
 has been made is because it is possible that a metheorological station is not exactly placed inside a
 specific location but it could be in the nearby.
 \end{comment}
 
-\newpage
-
 \subsection{Information Gathering}
 
-here we provide an overview of the data used in input for this project, including resources using different languages.
-
-We want to gather relevant information coherent with our purpose, in order to construct a meaningful knowledge graph.
-
-The knowledge layer of the proposed Knowledge Graph is grounded on external semantic resources. In particular,
-\href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{Wikidata}------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-is employed as the primary external knowledge source to link selected domain entities, such as Meteorological facility
+here we provide an overview of the data used in input for this project, including resources using different languages. We want to gather relevant information coherent with our purpose, in order to construct a meaningful knowledge graph. The knowledge layer of the proposed Knowledge Graph is grounded on external semantic resources. In particular,
+\href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{Wikidata} is employed as the primary external knowledge source to link selected domain entities, such as Meteorological facility
 (or weather station for sinonimicity), the region of Trentino and so on, to well-established real-world concepts.
 Wikidata offers a collaboratively maintained, structured knowledge base that ensures semantic consistency and
 interoperability with existing linked data resources.\\
 These resources are not directly reused as ontologies but are referenced through semantic links to provide an external
 grounding for key concepts.
 The adopted formal knowledge resources can be classified as \textbf{common} resources, as Wikidata provides general-purpose
-concepts widely used across multiple domains, No core or contextual domain-specific ontologies were directly reused.\\
-
+concepts widely used across multiple domains, No core or contextual domain-specific ontologies were directly reused.
 Additional domain ontologies were considered during the design phase but were not directly adopted in order to preserve
-model simplicity and avoid unnecessary complexity.\\
-\\
-
-The data layer of the Knowledge Graph is built on meteorological measurements and weather stations collected from the
-open-access repository \href{http://storico.meteotrentino.it/web.htm}{meteotrentino}. The dataset provides detailed
-information about weatherstations in the Trentino region, including geographic coordinates, macro-areas and station ID and name.
-Measurements are composed by all of different measurement categories such as temperature, rainfall, humidity, wind,
-pressure, and solar radiation, corresponding to the main meteorological phenomena relevant to climate analysis, and relative timestamp.
-
+model simplicity and avoid unnecessary complexity. The data layer of the Knowledge Graph is built on meteorological measurements and weather stations collected from the
+open-access repository \href{http://storico.meteotrentino.it/web.htm}{meteotrentino}, which provides detailed information about weatherstations in the Trentino region, including geographic coordinates, macro-areas and station ID and name.
+Data fields are composed by all of different measurement categories such as temperature, rainfall, humidity, wind, pressure, and solar radiation, corresponding to the main meteorological phenomena relevant to climate analysis, and relative timestamp.  
 \subsubsection{MetereologicalFacility}
 MetereologicalFacility, or weather station, represents the building located in a specific point of the Trentino region, this resource has the following attributes.
 \begin{itemize}
@@ -382,9 +368,7 @@ The focus is \textbf{common} because it is reusable and we linked it with a Wiki
 
 \subsection{Evaluation - Purpose Definition}
 We faced some issue during the purpose definition phase, mainly we had to change the modeling, because in the beginning
-it was under modelled, and after this we made it more complex, reaching a model that we judged as over modelled, finding
-in the end a good middle ground.\\
-
-But still there are some peculiarity that we choose to keep for eventual future modification,
+it was under modelled, and after this we made it more complex, reaching a model that we judged as over modelled, finding in the end a good middle ground. But still there are some peculiarity that we choose to keep for eventual future modification,
 for instance the Etype PressureMeasurement was not answering any competency question, so we decided to add a specific
-competency question to make it more integrated in the model, we added the competency question identified by ID Q10
+competency question to make it more integrated in the model, we added the competency question identified by ID Q10.
+With the data finally retrieved we can see that not all competency questions can be answered: some of them in fact, like Q3 and Q5, can be satisfied only if we considered the geographical area where the measurements have been made, otherwise it would be impossible to answer them since the locations data were unavailable, also we haven't been able to retrieve data in order to classify weather conditions as extreme or not; for these reason we decided to remove the competency questions Q4 and Q7 since there are no data that allow satisfy them. Problems arised also during the retrievement of the data from different stations: it has been seen that it is not possible to automatize the process through scripting because the download is made by a dynamically generated link that changes every time a data request spreadsheet is sent to the website; for this reason we will consider only an arbitrary subset of meteorological facilities spread across Trentino, while the other ones will be considered non existsent. 
